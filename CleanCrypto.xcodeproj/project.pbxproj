@@ -21,23 +21,6 @@
 		715283112213143D004602FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7152830F2213143D004602FF /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		715283182213143D004602FF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 715282FB2213143A004602FF /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 715283022213143A004602FF;
-			remoteInfo = CleanCrypto;
-		};
-		715283232213143D004602FF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 715282FB2213143A004602FF /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 715283022213143A004602FF;
-			remoteInfo = CleanCrypto;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		59D5ED82252181B900DB8AB5 /* BitcoinPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinPresenter.swift; sourceTree = "<group>"; };
 		59D5ED83252181B900DB8AB5 /* BitcoinWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinWorker.swift; sourceTree = "<group>"; };
@@ -53,26 +36,10 @@
 		7152830D2213143D004602FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		715283102213143D004602FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		715283122213143D004602FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		715283172213143D004602FF /* CleanCryptoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CleanCryptoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		715283222213143D004602FF /* CleanCryptoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CleanCryptoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		715283002213143A004602FF /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		715283142213143D004602FF /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7152831F2213143D004602FF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -107,8 +74,6 @@
 			isa = PBXGroup;
 			children = (
 				715283032213143A004602FF /* CleanCrypto.app */,
-				715283172213143D004602FF /* CleanCryptoTests.xctest */,
-				715283222213143D004602FF /* CleanCryptoUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -172,42 +137,6 @@
 			productReference = 715283032213143A004602FF /* CleanCrypto.app */;
 			productType = "com.apple.product-type.application";
 		};
-		715283162213143D004602FF /* CleanCryptoTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 7152832E2213143D004602FF /* Build configuration list for PBXNativeTarget "CleanCryptoTests" */;
-			buildPhases = (
-				715283132213143D004602FF /* Sources */,
-				715283142213143D004602FF /* Frameworks */,
-				715283152213143D004602FF /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				715283192213143D004602FF /* PBXTargetDependency */,
-			);
-			name = CleanCryptoTests;
-			productName = CleanCryptoTests;
-			productReference = 715283172213143D004602FF /* CleanCryptoTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		715283212213143D004602FF /* CleanCryptoUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 715283312213143D004602FF /* Build configuration list for PBXNativeTarget "CleanCryptoUITests" */;
-			buildPhases = (
-				7152831E2213143D004602FF /* Sources */,
-				7152831F2213143D004602FF /* Frameworks */,
-				715283202213143D004602FF /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				715283242213143D004602FF /* PBXTargetDependency */,
-			);
-			name = CleanCryptoUITests;
-			productName = CleanCryptoUITests;
-			productReference = 715283222213143D004602FF /* CleanCryptoUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -221,16 +150,6 @@
 					715283022213143A004602FF = {
 						CreatedOnToolsVersion = 10.1;
 						LastSwiftMigration = 1020;
-					};
-					715283162213143D004602FF = {
-						CreatedOnToolsVersion = 10.1;
-						LastSwiftMigration = 1020;
-						TestTargetID = 715283022213143A004602FF;
-					};
-					715283212213143D004602FF = {
-						CreatedOnToolsVersion = 10.1;
-						LastSwiftMigration = 1020;
-						TestTargetID = 715283022213143A004602FF;
 					};
 				};
 			};
@@ -248,8 +167,6 @@
 			projectRoot = "";
 			targets = (
 				715283022213143A004602FF /* CleanCrypto */,
-				715283162213143D004602FF /* CleanCryptoTests */,
-				715283212213143D004602FF /* CleanCryptoUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -262,20 +179,6 @@
 				715283112213143D004602FF /* LaunchScreen.storyboard in Resources */,
 				7152830E2213143D004602FF /* Assets.xcassets in Resources */,
 				7152830C2213143A004602FF /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		715283152213143D004602FF /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		715283202213143D004602FF /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,34 +201,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		715283132213143D004602FF /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7152831E2213143D004602FF /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		715283192213143D004602FF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 715283022213143A004602FF /* CleanCrypto */;
-			targetProxy = 715283182213143D004602FF /* PBXContainerItemProxy */;
-		};
-		715283242213143D004602FF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 715283022213143A004602FF /* CleanCrypto */;
-			targetProxy = 715283232213143D004602FF /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		7152830A2213143A004602FF /* Main.storyboard */ = {
@@ -499,88 +375,6 @@
 			};
 			name = Release;
 		};
-		7152832F2213143D004602FF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5LBZDN8XB8;
-				INFOPLIST_FILE = CleanCryptoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.clean-swift.CleanCryptoTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CleanCrypto.app/CleanCrypto";
-			};
-			name = Debug;
-		};
-		715283302213143D004602FF /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5LBZDN8XB8;
-				INFOPLIST_FILE = CleanCryptoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.clean-swift.CleanCryptoTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CleanCrypto.app/CleanCrypto";
-			};
-			name = Release;
-		};
-		715283322213143D004602FF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5LBZDN8XB8;
-				INFOPLIST_FILE = CleanCryptoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.clean-swift.CleanCryptoUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = CleanCrypto;
-			};
-			name = Debug;
-		};
-		715283332213143D004602FF /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5LBZDN8XB8;
-				INFOPLIST_FILE = CleanCryptoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.clean-swift.CleanCryptoUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = CleanCrypto;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -598,24 +392,6 @@
 			buildConfigurations = (
 				7152832C2213143D004602FF /* Debug */,
 				7152832D2213143D004602FF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		7152832E2213143D004602FF /* Build configuration list for PBXNativeTarget "CleanCryptoTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7152832F2213143D004602FF /* Debug */,
-				715283302213143D004602FF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		715283312213143D004602FF /* Build configuration list for PBXNativeTarget "CleanCryptoUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				715283322213143D004602FF /* Debug */,
-				715283332213143D004602FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
