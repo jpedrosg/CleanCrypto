@@ -783,10 +783,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ICw-3p-aUv">
-                                <rect key="frame" x="30" y="84" width="260" height="444"/>
+                                <rect key="frame" x="20" y="84" width="280" height="444"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="eMG-K6-ERX">
-                                        <rect key="frame" x="17" y="0.0" width="226" height="70"/>
+                                        <rect key="frame" x="27" y="0.0" width="226" height="70"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="86" translatesAutoresizingMaskIntoConstraints="NO" id="kfb-Us-rfQ">
                                                 <rect key="frame" x="0.0" y="0.0" width="226" height="20"/>
@@ -838,7 +838,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="EUJ-Rs-sjk">
-                                        <rect key="frame" x="90" y="182.5" width="80" height="85"/>
+                                        <rect key="frame" x="100" y="182.5" width="80" height="85"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="vCD-M8-Vec">
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="48"/>
@@ -864,7 +864,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mqN-WB-i6I">
-                                        <rect key="frame" x="100" y="385.5" width="60" height="58"/>
+                                        <rect key="frame" x="110" y="385.5" width="60" height="58"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="60" id="8pU-3z-g43"/>
                                             <constraint firstAttribute="height" constant="59" id="edk-il-nwb"/>
@@ -883,9 +883,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="ICw-3p-aUv" firstAttribute="top" secondItem="h8R-Pm-8d4" secondAttribute="top" constant="40" id="3FA-Xh-VyI"/>
-                            <constraint firstItem="h8R-Pm-8d4" firstAttribute="trailing" secondItem="ICw-3p-aUv" secondAttribute="trailing" constant="30" id="3cM-2I-IN7"/>
+                            <constraint firstItem="h8R-Pm-8d4" firstAttribute="trailing" secondItem="ICw-3p-aUv" secondAttribute="trailing" constant="20" id="3cM-2I-IN7"/>
                             <constraint firstItem="h8R-Pm-8d4" firstAttribute="bottom" secondItem="ICw-3p-aUv" secondAttribute="bottom" constant="40" id="8e8-Md-8eI"/>
-                            <constraint firstItem="ICw-3p-aUv" firstAttribute="leading" secondItem="h8R-Pm-8d4" secondAttribute="leading" constant="30" id="jhi-ou-NVd"/>
+                            <constraint firstItem="ICw-3p-aUv" firstAttribute="leading" secondItem="h8R-Pm-8d4" secondAttribute="leading" constant="20" id="jhi-ou-NVd"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="5SE-WX-nUY"/>
