@@ -1,5 +1,5 @@
 //
-//  BitcoinViewController.swift
+//  CryptoViewController.swift
 //  CleanStore
 //
 //  Created by João Pedro Giarrante on 27/09/20.
@@ -12,15 +12,15 @@
 
 import UIKit
 
-protocol BitcoinDisplayLogic: class
+protocol CryptoDisplayLogic: class
 {
-    func displayFetchedCrypto(viewModel: Bitcoin.FetchCrypto.ViewModel)
+    func displayFetchedCrypto(viewModel: CryptoModels.FetchCrypto.ViewModel)
 }
 
-class BitcoinViewController: UIViewController, BitcoinDisplayLogic
+class CryptoViewController: UIViewController, CryptoDisplayLogic
 {
-    var interactor: BitcoinBusinessLogic?
-    var router: (NSObjectProtocol & BitcoinRoutingLogic & BitcoinDataPassing)?
+    var interactor: CryptoBusinessLogic?
+    var router: (NSObjectProtocol & CryptoRoutingLogic & CryptoDataPassing)?
     
     // MARK: Object lifecycle
     
@@ -42,8 +42,8 @@ class BitcoinViewController: UIViewController, BitcoinDisplayLogic
     {
         let viewController = self
         let interactor = BitcoinInteractor()
-        let presenter = BitcoinPresenter()
-        let router = BitcoinRouter()
+        let presenter = CryptoPresenter()
+        let router = CryptoRouter()
         viewController.interactor = interactor
         viewController.router = router
         interactor.presenter = presenter
@@ -69,8 +69,15 @@ class BitcoinViewController: UIViewController, BitcoinDisplayLogic
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        setupView()
         fetchCrypto()
     }
+    
+    func setupView(){
+        btnReload.layer.cornerRadius = 5
+        
+    }
+    
     
     // MARK: Fetch Crypto
     
@@ -79,6 +86,7 @@ class BitcoinViewController: UIViewController, BitcoinDisplayLogic
     @IBOutlet weak var indicator: UIActivityIndicatorView!
     @IBOutlet weak var txtTicket: UITextField!
     @IBOutlet weak var txtCurrency: UITextField!
+    @IBOutlet weak var btnReload: UIButton!
     
     @IBAction func clickCryptoImage(_ sender: UIButton) {
         fetchCrypto()
@@ -107,12 +115,12 @@ class BitcoinViewController: UIViewController, BitcoinDisplayLogic
             currencyPlaceholder = txtCurrency.placeholder
         }
         
-        let request = Bitcoin.FetchCrypto.Request(ticket: ticketText ?? ticketPlaceholder ?? "LTC", currency: currencyText ?? currencyPlaceholder ?? "BRL")
+        let request = CryptoModels.FetchCrypto.Request(ticket: ticketText ?? ticketPlaceholder ?? "LTC", currency: currencyText ?? currencyPlaceholder ?? "BRL")
         interactor?.fetchCrypto(request: request)
         indicator.startAnimating()
     }
     
-    func displayFetchedCrypto(viewModel: Bitcoin.FetchCrypto.ViewModel)
+    func displayFetchedCrypto(viewModel: CryptoModels.FetchCrypto.ViewModel)
     {
         lblTicket.text = viewModel.displayedCrypto.ticket
         lblPrice.text = viewModel.displayedCrypto.price

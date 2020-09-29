@@ -7,12 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		59D5ED88252181B900DB8AB5 /* BitcoinPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D5ED82252181B900DB8AB5 /* BitcoinPresenter.swift */; };
-		59D5ED89252181B900DB8AB5 /* BitcoinWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D5ED83252181B900DB8AB5 /* BitcoinWorker.swift */; };
-		59D5ED8A252181B900DB8AB5 /* BitcoinRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D5ED84252181B900DB8AB5 /* BitcoinRouter.swift */; };
-		59D5ED8B252181B900DB8AB5 /* BitcoinModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D5ED85252181B900DB8AB5 /* BitcoinModels.swift */; };
-		59D5ED8C252181B900DB8AB5 /* BitcoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D5ED86252181B900DB8AB5 /* BitcoinViewController.swift */; };
-		59D5ED8D252181B900DB8AB5 /* BitcoinInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D5ED87252181B900DB8AB5 /* BitcoinInteractor.swift */; };
+		59D5ED88252181B900DB8AB5 /* CryptoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D5ED82252181B900DB8AB5 /* CryptoPresenter.swift */; };
+		59D5ED8A252181B900DB8AB5 /* CryptoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D5ED84252181B900DB8AB5 /* CryptoRouter.swift */; };
+		59D5ED8B252181B900DB8AB5 /* CryptoModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D5ED85252181B900DB8AB5 /* CryptoModels.swift */; };
+		59D5ED8C252181B900DB8AB5 /* CryptoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D5ED86252181B900DB8AB5 /* CryptoViewController.swift */; };
+		59D5ED8D252181B900DB8AB5 /* Cryptolnteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D5ED87252181B900DB8AB5 /* Cryptolnteractor.swift */; };
 		59D5ED9225218EF200DB8AB5 /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D5ED9125218EF200DB8AB5 /* Crypto.swift */; };
 		59D5ED972521966600DB8AB5 /* CryptoWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D5ED962521966600DB8AB5 /* CryptoWorker.swift */; };
 		715283072213143A004602FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715283062213143A004602FF /* AppDelegate.swift */; };
@@ -22,12 +21,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		59D5ED82252181B900DB8AB5 /* BitcoinPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinPresenter.swift; sourceTree = "<group>"; };
-		59D5ED83252181B900DB8AB5 /* BitcoinWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinWorker.swift; sourceTree = "<group>"; };
-		59D5ED84252181B900DB8AB5 /* BitcoinRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinRouter.swift; sourceTree = "<group>"; };
-		59D5ED85252181B900DB8AB5 /* BitcoinModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinModels.swift; sourceTree = "<group>"; };
-		59D5ED86252181B900DB8AB5 /* BitcoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinViewController.swift; sourceTree = "<group>"; };
-		59D5ED87252181B900DB8AB5 /* BitcoinInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinInteractor.swift; sourceTree = "<group>"; };
+		59D5ED82252181B900DB8AB5 /* CryptoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoPresenter.swift; sourceTree = "<group>"; };
+		59D5ED84252181B900DB8AB5 /* CryptoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoRouter.swift; sourceTree = "<group>"; };
+		59D5ED85252181B900DB8AB5 /* CryptoModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoModels.swift; sourceTree = "<group>"; };
+		59D5ED86252181B900DB8AB5 /* CryptoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoViewController.swift; sourceTree = "<group>"; };
+		59D5ED87252181B900DB8AB5 /* Cryptolnteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cryptolnteractor.swift; sourceTree = "<group>"; };
 		59D5ED9125218EF200DB8AB5 /* Crypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crypto.swift; sourceTree = "<group>"; };
 		59D5ED962521966600DB8AB5 /* CryptoWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoWorker.swift; sourceTree = "<group>"; };
 		715283032213143A004602FF /* CleanCrypto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanCrypto.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,12 +50,12 @@
 		59D5ED812521818700DB8AB5 /* Bitcoin */ = {
 			isa = PBXGroup;
 			children = (
-				59D5ED82252181B900DB8AB5 /* BitcoinPresenter.swift */,
-				59D5ED83252181B900DB8AB5 /* BitcoinWorker.swift */,
-				59D5ED84252181B900DB8AB5 /* BitcoinRouter.swift */,
-				59D5ED85252181B900DB8AB5 /* BitcoinModels.swift */,
-				59D5ED86252181B900DB8AB5 /* BitcoinViewController.swift */,
-				59D5ED87252181B900DB8AB5 /* BitcoinInteractor.swift */,
+				59D5ED82252181B900DB8AB5 /* CryptoPresenter.swift */,
+				59D5ED962521966600DB8AB5 /* CryptoWorker.swift */,
+				59D5ED84252181B900DB8AB5 /* CryptoRouter.swift */,
+				59D5ED85252181B900DB8AB5 /* CryptoModels.swift */,
+				59D5ED86252181B900DB8AB5 /* CryptoViewController.swift */,
+				59D5ED87252181B900DB8AB5 /* Cryptolnteractor.swift */,
 			);
 			path = Bitcoin;
 			sourceTree = "<group>";
@@ -104,7 +102,6 @@
 		7152834F2213676C004602FF /* Workers */ = {
 			isa = PBXGroup;
 			children = (
-				59D5ED962521966600DB8AB5 /* CryptoWorker.swift */,
 			);
 			path = Workers;
 			sourceTree = "<group>";
@@ -144,7 +141,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1010;
-				LastUpgradeCheck = 1010;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Clean Swift LLC";
 				TargetAttributes = {
 					715283022213143A004602FF = {
@@ -189,15 +186,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				59D5ED8B252181B900DB8AB5 /* BitcoinModels.swift in Sources */,
+				59D5ED8B252181B900DB8AB5 /* CryptoModels.swift in Sources */,
 				59D5ED9225218EF200DB8AB5 /* Crypto.swift in Sources */,
-				59D5ED8D252181B900DB8AB5 /* BitcoinInteractor.swift in Sources */,
+				59D5ED8D252181B900DB8AB5 /* Cryptolnteractor.swift in Sources */,
 				59D5ED972521966600DB8AB5 /* CryptoWorker.swift in Sources */,
-				59D5ED89252181B900DB8AB5 /* BitcoinWorker.swift in Sources */,
-				59D5ED8A252181B900DB8AB5 /* BitcoinRouter.swift in Sources */,
+				59D5ED8A252181B900DB8AB5 /* CryptoRouter.swift in Sources */,
 				715283072213143A004602FF /* AppDelegate.swift in Sources */,
-				59D5ED88252181B900DB8AB5 /* BitcoinPresenter.swift in Sources */,
-				59D5ED8C252181B900DB8AB5 /* BitcoinViewController.swift in Sources */,
+				59D5ED88252181B900DB8AB5 /* CryptoPresenter.swift in Sources */,
+				59D5ED8C252181B900DB8AB5 /* CryptoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +245,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -274,7 +271,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -310,6 +307,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -329,7 +327,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -344,7 +342,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5LBZDN8XB8;
+				DEVELOPMENT_TEAM = 6MTQAAFW5T;
 				INFOPLIST_FILE = CleanCrypto/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -362,7 +360,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5LBZDN8XB8;
+				DEVELOPMENT_TEAM = 6MTQAAFW5T;
 				INFOPLIST_FILE = CleanCrypto/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

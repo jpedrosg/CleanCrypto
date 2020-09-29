@@ -1,5 +1,5 @@
 //
-//  BitcoinPresenter.swift
+//  CryptoPresenter.swift
 //  CleanStore
 //
 //  Created by João Pedro Giarrante on 27/09/20.
@@ -12,20 +12,20 @@
 
 import UIKit
 
-protocol BitcoinPresentationLogic
+protocol CryptoPresentationLogic
 {
-    func presentFetchedCrypto(response: Bitcoin.FetchCrypto.Response)
+    func presentFetchedCrypto(response: CryptoModels.FetchCrypto.Response)
 }
 
-class BitcoinPresenter: BitcoinPresentationLogic
+class CryptoPresenter: CryptoPresentationLogic
 {
-    weak var viewController: BitcoinDisplayLogic?
+    weak var viewController: CryptoDisplayLogic?
     
     // MARK: Do something
     
-    func presentFetchedCrypto(response: Bitcoin.FetchCrypto.Response)
+    func presentFetchedCrypto(response: CryptoModels.FetchCrypto.Response)
     {
-        var displayedCrypto: Bitcoin.FetchCrypto.ViewModel.DisplayedCrypto
+        var displayedCrypto: CryptoModels.FetchCrypto.ViewModel.DisplayedCrypto
         
         
         // Currency Symbol
@@ -47,10 +47,10 @@ class BitcoinPresenter: BitcoinPresentationLogic
                 if number == 0 {price = " Não Encontrado "}
                 
                 // Creating ViewModel
-                displayedCrypto = Bitcoin.FetchCrypto.ViewModel.DisplayedCrypto(price: price, ticket: response.crypto.assetIDBase ?? " ? ")
+                displayedCrypto = CryptoModels.FetchCrypto.ViewModel.DisplayedCrypto(price: price, ticket: response.crypto.assetIDBase ?? " ? ")
                 
                 // Displaying
-                let viewModel = Bitcoin.FetchCrypto.ViewModel(displayedCrypto: displayedCrypto)
+                let viewModel = CryptoModels.FetchCrypto.ViewModel(displayedCrypto: displayedCrypto)
                 viewController?.displayFetchedCrypto(viewModel: viewModel)
             }
         }

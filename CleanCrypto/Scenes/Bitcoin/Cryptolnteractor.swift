@@ -12,31 +12,31 @@
 
 import UIKit
 
-protocol BitcoinBusinessLogic
+protocol CryptoBusinessLogic
 {
-    func fetchCrypto(request: Bitcoin.FetchCrypto.Request)
+    func fetchCrypto(request: CryptoModels.FetchCrypto.Request)
 }
 
-protocol BitcoinDataStore
+protocol CryptoDataStore
 {
     var crypto: Crypto! { get set }
 }
 
-class BitcoinInteractor: BitcoinBusinessLogic, BitcoinDataStore
+class BitcoinInteractor: CryptoBusinessLogic, CryptoDataStore
 {
     var crypto: Crypto!
-    var presenter: BitcoinPresentationLogic?
+    var presenter: CryptoPresentationLogic?
     var cryptoWorker = CryptoWorker()
 
     // MARK: Fetch Crypto
     
-    func fetchCrypto(request: Bitcoin.FetchCrypto.Request)
+    func fetchCrypto(request: CryptoModels.FetchCrypto.Request)
     {
 
         cryptoWorker.fetchCrypto(ticket: request.ticket, currency: request.currency) { (crypto, error) -> Void in
             if let safeCrypto = crypto {
                 self.crypto = safeCrypto
-                let response = Bitcoin.FetchCrypto.Response(crypto: safeCrypto)
+                let response = CryptoModels.FetchCrypto.Response(crypto: safeCrypto)
                 self.presenter?.presentFetchedCrypto(response: response)
             }
 //            else if let safeError = error {

@@ -12,7 +12,7 @@
 
 import UIKit
 
-enum Bitcoin
+enum CryptoModels
 {
     // MARK: Use cases
     

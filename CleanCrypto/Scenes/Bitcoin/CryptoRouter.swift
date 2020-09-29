@@ -1,5 +1,5 @@
 //
-//  BitcoinRouter.swift
+//  CryptoRouter.swift
 //  CleanStore
 //
 //  Created by João Pedro Giarrante on 27/09/20.
@@ -12,20 +12,20 @@
 
 import UIKit
 
-@objc protocol BitcoinRoutingLogic
+@objc protocol CryptoRoutingLogic
 {
     //func routeToSomewhere(segue: UIStoryboardSegue?)
 }
 
-protocol BitcoinDataPassing
+protocol CryptoDataPassing
 {
-    var dataStore: BitcoinDataStore? { get }
+    var dataStore: CryptoDataStore? { get }
 }
 
-class BitcoinRouter: NSObject, BitcoinRoutingLogic, BitcoinDataPassing
+class CryptoRouter: NSObject, CryptoRoutingLogic, CryptoDataPassing
 {
-    weak var viewController: BitcoinViewController?
-    var dataStore: BitcoinDataStore?
+    weak var viewController: CryptoViewController?
+    var dataStore: CryptoDataStore?
     
     // MARK: Routing
     
@@ -46,7 +46,7 @@ class BitcoinRouter: NSObject, BitcoinRoutingLogic, BitcoinDataPassing
     
     // MARK: Navigation
     
-    //func navigateToSomewhere(source: BitcoinViewController, destination: SomewhereViewController)
+    //func navigateToSomewhere(source: CryptoViewController, destination: SomewhereViewController)
     //{
     //  source.show(destination, sender: nil)
     //}
