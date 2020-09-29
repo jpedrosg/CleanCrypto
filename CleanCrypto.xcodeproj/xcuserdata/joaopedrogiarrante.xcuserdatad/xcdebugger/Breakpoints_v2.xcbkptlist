@@ -20,5 +20,117 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6F2CB021-F2FC-4EBA-B66B-55F4D7DAF80D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CleanCrypto/Scenes/Crypto/CryptoRouter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "passDataToCryptoDetail(source:destination:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "27B54D19-F149-40DE-9D6B-936F5B5E37AA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CleanCrypto/Scenes/CryptoDetail/CryptoDetailViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "prepare(for:sender:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "36573119-60B2-4B9F-8DA6-CC5525E6B7BA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CleanCrypto/Scenes/Crypto/Cryptolnteractor.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "fetchCrypto(request:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CE23C36E-8756-4366-AA06-23FD3A8D164B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CleanCrypto/Scenes/Crypto/CryptoWorker.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "parseJSON(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3BCF564E-0676-43FB-B907-1A9211476D00"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CleanCrypto/Scenes/Crypto/CryptoWorker.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "fetchCrypto(ticket:currency:completionHandler:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3BCF564E-0676-43FB-B907-1A9211476D00 - 3e9d1d2726a862e0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CleanCrypto.CryptoWorker.fetchCrypto(ticket: Swift.String, currency: Swift.String, completionHandler: (Swift.Optional&lt;CleanCrypto.Crypto&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "CleanCrypto"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/joaopedrogiarrante/OneDrive%20-%20VALEMOBI%20CONSULTORIA%20EMPRESARIAL%20S.A/Pessoal/Curso%20de%20Swift/Clean%20Swift/jpsg.clean_crypto/CleanCrypto/Scenes/Crypto/CryptoWorker.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "1113">
+               </Location>
+               <Location
+                  uuid = "3BCF564E-0676-43FB-B907-1A9211476D00 - 816988ad75c0469a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;CleanCrypto.Crypto&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in CleanCrypto.CryptoWorker.fetchCrypto(ticket: Swift.String, currency: Swift.String, completionHandler: (Swift.Optional&lt;CleanCrypto.Crypto&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "CleanCrypto"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/joaopedrogiarrante/OneDrive%20-%20VALEMOBI%20CONSULTORIA%20EMPRESARIAL%20S.A/Pessoal/Curso%20de%20Swift/Clean%20Swift/jpsg.clean_crypto/CleanCrypto/Scenes/Crypto/CryptoWorker.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "211">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

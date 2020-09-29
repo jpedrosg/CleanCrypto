@@ -11,7 +11,7 @@ import Foundation
 class CryptoWorker
 {
     let baseURL = "https://rest.coinapi.io/v1/exchangerate/"
-    let apiKey = "8C16581E-1EEB-47A7-B7A8-808D1D9BB5F6"
+    let apiKey = "5256247C-E5D3-4EAF-9678-8C01E87FB69C"
     
     
     func fetchCrypto(ticket: String, currency: String, completionHandler: @escaping (_ crypto: Crypto?,_ error: Error?) -> Void)

@@ -73,13 +73,14 @@ class CryptoViewController: UIViewController, CryptoDisplayLogic
         fetchCrypto()
     }
     
-    func setupView(){
+    // MARK: Functions
+    
+    fileprivate func setupView(){
         btnReload.layer.cornerRadius = 5
         
     }
     
-    
-    // MARK: Fetch Crypto
+    // MARK: Outlets and Actions
     
     @IBOutlet weak var lblTicket: UILabel!
     @IBOutlet weak var lblPrice: UILabel!
@@ -91,6 +92,8 @@ class CryptoViewController: UIViewController, CryptoDisplayLogic
     @IBAction func clickCryptoImage(_ sender: UIButton) {
         fetchCrypto()
     }
+    
+    // MARK: Fetch Crypto
     
     func fetchCrypto()
     {
@@ -125,6 +128,8 @@ class CryptoViewController: UIViewController, CryptoDisplayLogic
         lblTicket.text = viewModel.displayedCrypto.ticket
         lblPrice.text = viewModel.displayedCrypto.price
         indicator.stopAnimating()
+        txtCurrency.text = ""
+        txtTicket.text = ""
         
     }
 }

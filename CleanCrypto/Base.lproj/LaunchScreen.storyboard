@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -27,7 +26,7 @@
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" name="green"/>
+                        <color key="backgroundColor" name="4 - Dark Slate Gray"/>
                         <constraints>
                             <constraint firstItem="IBd-bd-DFv" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="UcC-mZ-0ss"/>
                             <constraint firstItem="IBd-bd-DFv" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="llY-q8-YRY"/>
@@ -41,8 +40,8 @@
     </scenes>
     <resources>
         <image name="bitcoinsign.circle" catalog="system" width="128" height="121"/>
-        <namedColor name="green">
-            <color red="0.034128837289999998" green="0.1577127874" blue="0.16323173050000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="4 - Dark Slate Gray">
+            <color red="0.20900000631809235" green="0.31200000643730164" blue="0.32199999690055847" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

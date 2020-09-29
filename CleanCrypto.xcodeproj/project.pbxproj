@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		598272F92522B43100BA0D06 /* CryptoDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598272F32522B43100BA0D06 /* CryptoDetailPresenter.swift */; };
+		598272FA2522B43100BA0D06 /* CryptoDetailWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598272F42522B43100BA0D06 /* CryptoDetailWorker.swift */; };
+		598272FB2522B43100BA0D06 /* CryptoDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598272F52522B43100BA0D06 /* CryptoDetailRouter.swift */; };
+		598272FC2522B43100BA0D06 /* CryptoDetailModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598272F62522B43100BA0D06 /* CryptoDetailModels.swift */; };
+		598272FD2522B43100BA0D06 /* CryptoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598272F72522B43100BA0D06 /* CryptoDetailViewController.swift */; };
+		598272FE2522B43100BA0D06 /* CryptoDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598272F82522B43100BA0D06 /* CryptoDetailInteractor.swift */; };
+		598273022522C74A00BA0D06 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598273012522C74A00BA0D06 /* String.swift */; };
 		59D5ED88252181B900DB8AB5 /* CryptoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D5ED82252181B900DB8AB5 /* CryptoPresenter.swift */; };
 		59D5ED8A252181B900DB8AB5 /* CryptoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D5ED84252181B900DB8AB5 /* CryptoRouter.swift */; };
 		59D5ED8B252181B900DB8AB5 /* CryptoModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D5ED85252181B900DB8AB5 /* CryptoModels.swift */; };
@@ -21,6 +28,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		598272F32522B43100BA0D06 /* CryptoDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoDetailPresenter.swift; sourceTree = "<group>"; };
+		598272F42522B43100BA0D06 /* CryptoDetailWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoDetailWorker.swift; sourceTree = "<group>"; };
+		598272F52522B43100BA0D06 /* CryptoDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoDetailRouter.swift; sourceTree = "<group>"; };
+		598272F62522B43100BA0D06 /* CryptoDetailModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoDetailModels.swift; sourceTree = "<group>"; };
+		598272F72522B43100BA0D06 /* CryptoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoDetailViewController.swift; sourceTree = "<group>"; };
+		598272F82522B43100BA0D06 /* CryptoDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoDetailInteractor.swift; sourceTree = "<group>"; };
+		598273012522C74A00BA0D06 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		59D5ED82252181B900DB8AB5 /* CryptoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoPresenter.swift; sourceTree = "<group>"; };
 		59D5ED84252181B900DB8AB5 /* CryptoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoRouter.swift; sourceTree = "<group>"; };
 		59D5ED85252181B900DB8AB5 /* CryptoModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoModels.swift; sourceTree = "<group>"; };
@@ -47,7 +61,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		59D5ED812521818700DB8AB5 /* Bitcoin */ = {
+		598272F22522B41300BA0D06 /* CryptoDetail */ = {
+			isa = PBXGroup;
+			children = (
+				598272F32522B43100BA0D06 /* CryptoDetailPresenter.swift */,
+				598272F42522B43100BA0D06 /* CryptoDetailWorker.swift */,
+				598272F52522B43100BA0D06 /* CryptoDetailRouter.swift */,
+				598272F62522B43100BA0D06 /* CryptoDetailModels.swift */,
+				598272F72522B43100BA0D06 /* CryptoDetailViewController.swift */,
+				598272F82522B43100BA0D06 /* CryptoDetailInteractor.swift */,
+			);
+			path = CryptoDetail;
+			sourceTree = "<group>";
+		};
+		598273002522C73D00BA0D06 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				598273012522C74A00BA0D06 /* String.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		59D5ED812521818700DB8AB5 /* Crypto */ = {
 			isa = PBXGroup;
 			children = (
 				59D5ED82252181B900DB8AB5 /* CryptoPresenter.swift */,
@@ -57,7 +92,7 @@
 				59D5ED86252181B900DB8AB5 /* CryptoViewController.swift */,
 				59D5ED87252181B900DB8AB5 /* Cryptolnteractor.swift */,
 			);
-			path = Bitcoin;
+			path = Crypto;
 			sourceTree = "<group>";
 		};
 		715282FA2213143A004602FF = {
@@ -79,6 +114,7 @@
 		715283052213143A004602FF /* CleanCrypto */ = {
 			isa = PBXGroup;
 			children = (
+				598273002522C73D00BA0D06 /* Extensions */,
 				71528352221372AA004602FF /* Models */,
 				7152834F2213676C004602FF /* Workers */,
 				71528334221315DB004602FF /* Scenes */,
@@ -94,7 +130,8 @@
 		71528334221315DB004602FF /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				59D5ED812521818700DB8AB5 /* Bitcoin */,
+				598272F22522B41300BA0D06 /* CryptoDetail */,
+				59D5ED812521818700DB8AB5 /* Crypto */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -188,12 +225,19 @@
 			files = (
 				59D5ED8B252181B900DB8AB5 /* CryptoModels.swift in Sources */,
 				59D5ED9225218EF200DB8AB5 /* Crypto.swift in Sources */,
+				598272F92522B43100BA0D06 /* CryptoDetailPresenter.swift in Sources */,
+				598272FA2522B43100BA0D06 /* CryptoDetailWorker.swift in Sources */,
 				59D5ED8D252181B900DB8AB5 /* Cryptolnteractor.swift in Sources */,
+				598272FD2522B43100BA0D06 /* CryptoDetailViewController.swift in Sources */,
 				59D5ED972521966600DB8AB5 /* CryptoWorker.swift in Sources */,
+				598272FB2522B43100BA0D06 /* CryptoDetailRouter.swift in Sources */,
 				59D5ED8A252181B900DB8AB5 /* CryptoRouter.swift in Sources */,
 				715283072213143A004602FF /* AppDelegate.swift in Sources */,
+				598272FE2522B43100BA0D06 /* CryptoDetailInteractor.swift in Sources */,
 				59D5ED88252181B900DB8AB5 /* CryptoPresenter.swift in Sources */,
+				598273022522C74A00BA0D06 /* String.swift in Sources */,
 				59D5ED8C252181B900DB8AB5 /* CryptoViewController.swift in Sources */,
+				598272FC2522B43100BA0D06 /* CryptoDetailModels.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

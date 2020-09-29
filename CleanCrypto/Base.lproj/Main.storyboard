@@ -2,12 +2,10 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MQV-Dz-DUc">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,7 +14,7 @@
             <objects>
                 <viewController storyboardIdentifier="BitcoinViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rV3-WG-ZHq" customClass="CryptoViewController" customModule="CleanCrypto" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uVf-MY-0kO">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="692"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ICw-3p-aUv">
@@ -57,7 +55,7 @@
                                                         <color key="tintColor" name="green"/>
                                                         <color key="textColor" name="5 - Charcoal"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" enablesReturnKeyAutomatically="YES"/>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="BRL" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NuC-lo-V8X">
                                                         <rect key="frame" x="197" y="0.0" width="177" height="40"/>
@@ -65,7 +63,7 @@
                                                         <color key="tintColor" name="green"/>
                                                         <color key="textColor" name="5 - Charcoal"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" enablesReturnKeyAutomatically="YES"/>
                                                     </textField>
                                                 </subviews>
                                                 <constraints>
@@ -95,7 +93,7 @@
                                                                         <color key="tintColor" name="1 - Ash Gray"/>
                                                                         <state key="normal" backgroundImage="bitcoinsign.square.fill" catalog="system"/>
                                                                         <connections>
-                                                                            <segue destination="tS7-2a-aCw" kind="show" id="hAb-cq-KJo"/>
+                                                                            <segue destination="tS7-2a-aCw" kind="show" identifier="CryptoDetail" id="hAb-cq-KJo"/>
                                                                         </connections>
                                                                     </button>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LTC" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f9T-aV-j6u">
@@ -172,21 +170,151 @@
             </objects>
             <point key="canvasLocation" x="2981.1594202898555" y="79.076086956521749"/>
         </scene>
-        <!--View Controller-->
+        <!--Crypto Detail View Controller-->
         <scene sceneID="vT7-WJ-bsF">
             <objects>
-                <viewController id="tS7-2a-aCw" sceneMemberID="viewController">
+                <viewController id="tS7-2a-aCw" customClass="CryptoDetailViewController" customModule="CleanCrypto" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="i8j-IY-b57">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="692"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="38" translatesAutoresizingMaskIntoConstraints="NO" id="nly-rX-4qA">
+                                <rect key="frame" x="20" y="20" width="374" height="303.33333333333331"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="xCo-fq-qP7">
+                                        <rect key="frame" x="113.33333333333336" y="0.0" width="147.66666666666663" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BTC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nKD-Rb-NGX">
+                                                <rect key="frame" x="0.0" y="0.0" width="72.666666666666671" height="50"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="39"/>
+                                                <color key="textColor" name="1 - Ash Gray"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bitcoinsign.square.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="UvN-Ig-r1I">
+                                                <rect key="frame" x="97.666666666666657" y="1.6666666666666643" width="50" height="47"/>
+                                                <color key="tintColor" name="1 - Ash Gray"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="Snr-Hl-9cr"/>
+                                                    <constraint firstAttribute="width" constant="50" id="h3u-yP-bS1"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Gj5-6C-3UZ">
+                                        <rect key="frame" x="17" y="88" width="340" height="25.333333333333329"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COTAÇÃO:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UVj-ds-ceu">
+                                                <rect key="frame" x="0.0" y="0.0" width="160" height="25.333333333333332"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="YnP-8U-7dT"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <color key="textColor" name="1 - Ash Gray"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 250,00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aNA-FB-dYc">
+                                                <rect key="frame" x="180" y="0.0" width="160" height="25.333333333333332"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="xTo-9g-uVb"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                <color key="textColor" name="1 - Ash Gray"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="B6Z-YO-faC">
+                                        <rect key="frame" x="17" y="151.33333333333334" width="340" height="25.333333333333343"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VARIAÇÃO 24H:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1GI-yq-tVc">
+                                                <rect key="frame" x="0.0" y="0.0" width="160" height="25.333333333333332"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="0Iy-1I-ybu"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <color key="textColor" name="1 - Ash Gray"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+ 4,43%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nuN-SY-QcX">
+                                                <rect key="frame" x="180" y="0.0" width="160" height="25.333333333333332"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="AGT-HB-9vx"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                <color key="textColor" name="1 - Ash Gray"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="oeI-yd-1Sq">
+                                        <rect key="frame" x="17" y="214.66666666666669" width="340" height="25.333333333333343"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VARIAÇÃO MÊS:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UBw-UD-HQG">
+                                                <rect key="frame" x="0.0" y="0.0" width="160" height="25.333333333333332"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="8a9-ko-jfT"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <color key="textColor" name="1 - Ash Gray"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- 2,21%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HRa-Is-JhQ">
+                                                <rect key="frame" x="180" y="0.0" width="160" height="25.333333333333332"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="p7j-ry-Ahn"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                <color key="textColor" name="1 - Ash Gray"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="gJw-8c-9T1">
+                                        <rect key="frame" x="17" y="278" width="340" height="25.333333333333314"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VARIAÇÃO ANO:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T9b-xr-2yP">
+                                                <rect key="frame" x="0.0" y="0.0" width="160" height="25.333333333333332"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="tQk-E7-elM"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <color key="textColor" name="1 - Ash Gray"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+ 23,02%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VQe-SA-Ler">
+                                                <rect key="frame" x="180" y="0.0" width="160" height="25.333333333333332"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="bQL-ND-Qq4"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                <color key="textColor" name="1 - Ash Gray"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="t2H-Is-TP1"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="4 - Dark Slate Gray"/>
+                        <constraints>
+                            <constraint firstItem="t2H-Is-TP1" firstAttribute="trailing" secondItem="nly-rX-4qA" secondAttribute="trailing" constant="20" id="4kc-Jd-ORa"/>
+                            <constraint firstItem="nly-rX-4qA" firstAttribute="leading" secondItem="t2H-Is-TP1" secondAttribute="leading" constant="20" id="BQz-tG-o7Y"/>
+                            <constraint firstItem="nly-rX-4qA" firstAttribute="top" secondItem="t2H-Is-TP1" secondAttribute="top" constant="20" id="Mje-jr-dVN"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="0Lf-BI-VGC"/>
+                    <connections>
+                        <outlet property="lblCotacao" destination="aNA-FB-dYc" id="F78-SU-NJN"/>
+                        <outlet property="lblTicket" destination="nKD-Rb-NGX" id="Lp2-Ir-QKq"/>
+                        <outlet property="lblVar24h" destination="nuN-SY-QcX" id="5Cx-r8-fR3"/>
+                        <outlet property="lblVarAno" destination="VQe-SA-Ler" id="Q1A-zW-3I5"/>
+                        <outlet property="lblVarMes" destination="HRa-Is-JhQ" id="aeR-Of-8RC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c0O-8X-HPp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3820" y="79"/>
+            <point key="canvasLocation" x="3818.8405797101454" y="78.260869565217391"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NO9-ch-0N0">
@@ -196,7 +324,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" backIndicatorTransitionMaskImage="arrowshape.turn.up.left.circle" catalog="system" id="L4Y-lO-osC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" name="1 - Ash Gray"/>
                         <color key="barTintColor" name="4 - Dark Slate Gray"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="18"/>
@@ -217,28 +345,28 @@
             <point key="canvasLocation" x="1983.75" y="79.225352112676063"/>
         </scene>
     </scenes>
-    <color key="tintColor" name="3 - Hookers Green"/>
+    <color key="tintColor" name="1 - Ash Gray"/>
     <resources>
         <image name="arrowshape.turn.up.backward.circle.fill" catalog="system" width="128" height="121"/>
         <image name="arrowshape.turn.up.left.circle" catalog="system" width="128" height="121"/>
         <image name="bitcoinsign.square.fill" catalog="system" width="128" height="114"/>
         <namedColor name="1 - Ash Gray">
-            <color red="0.79089874029999996" green="0.82362097499999998" blue="0.77221286300000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.79100000858306885" green="0.82400000095367432" blue="0.7720000147819519" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="3 - Hookers Green">
-            <color red="0.32058915500000001" green="0.47510641809999998" blue="0.4356060028" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="1 - Ash Gray">
+            <color red="0.79100000858306885" green="0.82400000095367432" blue="0.7720000147819519" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="4 - Dark Slate Gray">
-            <color red="0.20910763739999999" green="0.31180340049999999" blue="0.32188087700000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20900000631809235" green="0.31200000643730164" blue="0.32199999690055847" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="4 - Dark Slate Gray">
+            <color red="0.20900000631809235" green="0.31200000643730164" blue="0.32199999690055847" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="5 - Charcoal">
-            <color red="0.18601053949999999" green="0.2420482635" blue="0.27488121389999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.18600000441074371" green="0.24199999868869781" blue="0.27500000596046448" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="green">
             <color red="0.034000001847743988" green="0.15800000727176666" blue="0.16300000250339508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>
