@@ -8,7 +8,12 @@
 
 import Foundation
 
-class CryptoWorker {
+protocol CryptoWorkerDisplayLogic {
+    func fetchCrypto(ticket: String, currency: String, completionHandler: @escaping (_ crypto: Crypto?,_ error: Error?) -> Void)
+}
+
+class CryptoWorker: CryptoWorkerDisplayLogic {
+    
     let baseURL = "https://rest.coinapi.io/v1/exchangerate/"
     let apiKey = "5256247C-E5D3-4EAF-9678-8C01E87FB69C"
     

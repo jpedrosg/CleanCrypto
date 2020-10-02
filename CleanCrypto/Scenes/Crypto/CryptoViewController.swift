@@ -36,7 +36,7 @@ class CryptoViewController: UIViewController, CryptoDisplayLogic {
     
     private func setup() {
         let viewController = self
-        let interactor = BitcoinInteractor()
+        let interactor = CryptoInteractor()
         let presenter = CryptoPresenter()
         let router = CryptoRouter()
         viewController.interactor = interactor

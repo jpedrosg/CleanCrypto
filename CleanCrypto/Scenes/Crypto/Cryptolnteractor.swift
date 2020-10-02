@@ -1,5 +1,5 @@
 //
-//  BitcoinInteractor.swift
+//  CryptoInteractor.swift
 //  CleanStore
 //
 //  Created by João Pedro Giarrante on 27/09/20.
@@ -20,16 +20,20 @@ protocol CryptoDataStore {
     var crypto: Crypto! { get set }
 }
 
-class BitcoinInteractor: CryptoBusinessLogic, CryptoDataStore {
+class CryptoInteractor: CryptoBusinessLogic, CryptoDataStore {
     var crypto: Crypto!
     var presenter: CryptoPresentationLogic?
-    var cryptoWorker = CryptoWorker()
-
+    var cryptoWorker: CryptoWorkerDisplayLogic?
+    
+    init(cryptoWorker: CryptoWorkerDisplayLogic = CryptoWorker()) {
+        self.cryptoWorker = cryptoWorker
+    }
+    
     // MARK: Fetch Crypto
     
     func fetchCrypto(request: CryptoModels.FetchCrypto.Request) {
 
-        cryptoWorker.fetchCrypto(ticket: request.ticket, currency: request.currency) { (crypto, error) -> Void in
+        cryptoWorker?.fetchCrypto(ticket: request.ticket, currency: request.currency) { (crypto, error) -> Void in
             if let safeCrypto = crypto {
                 self.crypto = safeCrypto
                 let response = CryptoModels.FetchCrypto.Response(crypto: safeCrypto)
