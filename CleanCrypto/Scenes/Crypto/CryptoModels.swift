@@ -12,25 +12,19 @@
 
 import UIKit
 
-enum CryptoModels
-{
+enum CryptoModels {
     // MARK: Use cases
     
-    enum FetchCrypto
-    {
-        struct Request
-        {
+    enum FetchCrypto {
+        struct Request {
             var ticket: String
             var currency: String
         }
-        struct Response
-        {
+        struct Response {
             var crypto: Crypto
         }
-        struct ViewModel
-        {
-            struct DisplayedCrypto
-            {
+        struct ViewModel {
+            struct DisplayedCrypto {
                 var price: String
                 var ticket: String
             }

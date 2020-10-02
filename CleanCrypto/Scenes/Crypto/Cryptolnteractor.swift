@@ -12,26 +12,22 @@
 
 import UIKit
 
-protocol CryptoBusinessLogic
-{
+protocol CryptoBusinessLogic {
     func fetchCrypto(request: CryptoModels.FetchCrypto.Request)
 }
 
-protocol CryptoDataStore
-{
+protocol CryptoDataStore {
     var crypto: Crypto! { get set }
 }
 
-class BitcoinInteractor: CryptoBusinessLogic, CryptoDataStore
-{
+class BitcoinInteractor: CryptoBusinessLogic, CryptoDataStore {
     var crypto: Crypto!
     var presenter: CryptoPresentationLogic?
     var cryptoWorker = CryptoWorker()
 
     // MARK: Fetch Crypto
     
-    func fetchCrypto(request: CryptoModels.FetchCrypto.Request)
-    {
+    func fetchCrypto(request: CryptoModels.FetchCrypto.Request) {
 
         cryptoWorker.fetchCrypto(ticket: request.ticket, currency: request.currency) { (crypto, error) -> Void in
             if let safeCrypto = crypto {
@@ -44,6 +40,5 @@ class BitcoinInteractor: CryptoBusinessLogic, CryptoDataStore
 //            }
             
         }
-        
     }
 }

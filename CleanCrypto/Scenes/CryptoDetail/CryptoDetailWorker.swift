@@ -12,9 +12,6 @@
 
 import UIKit
 
-class CryptoDetailWorker
-{
-  func doSomeWork()
-  {
-  }
+class CryptoDetailWorker {
+  func doSomeWork(){ }
 }

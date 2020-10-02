@@ -12,34 +12,29 @@
 
 import UIKit
 
-protocol CryptoDisplayLogic: class
-{
+protocol CryptoDisplayLogic: class {
     func displayFetchedCrypto(viewModel: CryptoModels.FetchCrypto.ViewModel)
 }
 
-class CryptoViewController: UIViewController, CryptoDisplayLogic
-{
+class CryptoViewController: UIViewController, CryptoDisplayLogic {
     var interactor: CryptoBusinessLogic?
     var router: (NSObjectProtocol & CryptoRoutingLogic & CryptoDataPassing)?
     
     // MARK: Object lifecycle
     
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?)
-    {
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         setup()
     }
     
-    required init?(coder aDecoder: NSCoder)
-    {
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setup()
     }
     
     // MARK: Setup
     
-    private func setup()
-    {
+    private func setup() {
         let viewController = self
         let interactor = BitcoinInteractor()
         let presenter = CryptoPresenter()
@@ -54,8 +49,7 @@ class CryptoViewController: UIViewController, CryptoDisplayLogic
     
     // MARK: Routing
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
-    {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let scene = segue.identifier {
             let selector = NSSelectorFromString("routeTo\(scene)WithSegue:")
             if let router = router, router.responds(to: selector) {
@@ -66,8 +60,7 @@ class CryptoViewController: UIViewController, CryptoDisplayLogic
     
     // MARK: View lifecycle
     
-    override func viewDidLoad()
-    {
+    override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
         fetchCrypto()
@@ -77,7 +70,6 @@ class CryptoViewController: UIViewController, CryptoDisplayLogic
     
     fileprivate func setupView(){
         btnReload.layer.cornerRadius = 5
-        
     }
     
     // MARK: Outlets and Actions
@@ -95,8 +87,7 @@ class CryptoViewController: UIViewController, CryptoDisplayLogic
     
     // MARK: Fetch Crypto
     
-    func fetchCrypto()
-    {
+    func fetchCrypto() {
 
         var ticketText:String?
         if txtTicket.text != "" {
@@ -123,13 +114,11 @@ class CryptoViewController: UIViewController, CryptoDisplayLogic
         indicator.startAnimating()
     }
     
-    func displayFetchedCrypto(viewModel: CryptoModels.FetchCrypto.ViewModel)
-    {
+    func displayFetchedCrypto(viewModel: CryptoModels.FetchCrypto.ViewModel) {
         lblTicket.text = viewModel.displayedCrypto.ticket
         lblPrice.text = viewModel.displayedCrypto.price
         indicator.stopAnimating()
         txtCurrency.text = ""
         txtTicket.text = ""
-        
     }
 }

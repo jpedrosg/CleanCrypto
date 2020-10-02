@@ -8,14 +8,12 @@
 
 import Foundation
 
-class CryptoWorker
-{
+class CryptoWorker {
     let baseURL = "https://rest.coinapi.io/v1/exchangerate/"
     let apiKey = "5256247C-E5D3-4EAF-9678-8C01E87FB69C"
     
     
-    func fetchCrypto(ticket: String, currency: String, completionHandler: @escaping (_ crypto: Crypto?,_ error: Error?) -> Void)
-    {
+    func fetchCrypto(ticket: String, currency: String, completionHandler: @escaping (_ crypto: Crypto?,_ error: Error?) -> Void) {
         let urlString = "\(baseURL)\(ticket)/\(currency)?apiKey=\(apiKey)"
         
         performRequest(with: urlString) { (crypto, error) in
@@ -26,7 +24,6 @@ class CryptoWorker
     }
 
     func performRequest(with urlString: String, completionHandler: @escaping (_ crypto: Crypto?,_ error: Error?) -> Void) {
-        
         var urlFinalString = urlString
         
         // Treating Spaces

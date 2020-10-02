@@ -12,34 +12,29 @@
 
 import UIKit
 
-protocol CryptoDetailDisplayLogic: class
-{
+protocol CryptoDetailDisplayLogic: class {
     func displayCryptoData(viewModel: CryptoDetail.CryptoData.ViewModel)
 }
 
-class CryptoDetailViewController: UIViewController, CryptoDetailDisplayLogic
-{
+class CryptoDetailViewController: UIViewController, CryptoDetailDisplayLogic {
     var interactor: CryptoDetailBusinessLogic?
     var router: (NSObjectProtocol & CryptoDetailRoutingLogic & CryptoDetailDataPassing)?
     
     // MARK: Object lifecycle
     
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?)
-    {
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         setup()
     }
     
-    required init?(coder aDecoder: NSCoder)
-    {
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setup()
     }
     
     // MARK: Setup
     
-    private func setup()
-    {
+    private func setup() {
         let viewController = self
         let interactor = CryptoDetailInteractor()
         let presenter = CryptoDetailPresenter()
@@ -54,8 +49,7 @@ class CryptoDetailViewController: UIViewController, CryptoDetailDisplayLogic
     
     // MARK: Routing
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
-    {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let scene = segue.identifier {
             let selector = NSSelectorFromString("routeTo\(scene)WithSegue:")
             if let router = router, router.responds(to: selector) {
@@ -66,8 +60,7 @@ class CryptoDetailViewController: UIViewController, CryptoDetailDisplayLogic
     
     // MARK: View lifecycle
     
-    override func viewDidLoad()
-    {
+    override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
         getCryptoData()
@@ -75,8 +68,7 @@ class CryptoDetailViewController: UIViewController, CryptoDetailDisplayLogic
     
     // MARK: Functions
     
-    fileprivate func setupView(){
-    }
+    fileprivate func setupView(){ }
     
     
     @IBOutlet weak var lblTicket: UILabel!
@@ -87,14 +79,12 @@ class CryptoDetailViewController: UIViewController, CryptoDetailDisplayLogic
     
     // MARK: Do something
     
-    func getCryptoData()
-    {
+    func getCryptoData() {
         let request = CryptoDetail.CryptoData.Request()
         interactor?.getCryptoData(request: request)
     }
     
-    func displayCryptoData(viewModel: CryptoDetail.CryptoData.ViewModel)
-    {
+    func displayCryptoData(viewModel: CryptoDetail.CryptoData.ViewModel) {
         lblTicket.text = viewModel.displayedCrypto.ticket
         lblCotacao.text = viewModel.displayedCrypto.price
         lblVar24h.text = viewModel.displayedCrypto.variacao24H

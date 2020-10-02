@@ -12,18 +12,15 @@
 
 import UIKit
 
-@objc protocol CryptoDetailRoutingLogic
-{
+@objc protocol CryptoDetailRoutingLogic {
   //func routeToSomewhere(segue: UIStoryboardSegue?)
 }
 
-protocol CryptoDetailDataPassing
-{
+protocol CryptoDetailDataPassing {
   var dataStore: CryptoDetailDataStore? { get }
 }
 
-class CryptoDetailRouter: NSObject, CryptoDetailRoutingLogic, CryptoDetailDataPassing
-{
+class CryptoDetailRouter: NSObject, CryptoDetailRoutingLogic, CryptoDetailDataPassing {
   weak var viewController: CryptoDetailViewController?
   var dataStore: CryptoDetailDataStore?
   

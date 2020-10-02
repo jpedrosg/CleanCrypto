@@ -12,25 +12,21 @@
 
 import UIKit
 
-@objc protocol CryptoRoutingLogic
-{
+@objc protocol CryptoRoutingLogic {
     func routeToCryptoDetail(segue: UIStoryboardSegue?)
 }
 
-protocol CryptoDataPassing
-{
+protocol CryptoDataPassing {
     var dataStore: CryptoDataStore? { get }
 }
 
-class CryptoRouter: NSObject, CryptoRoutingLogic, CryptoDataPassing
-{
+class CryptoRouter: NSObject, CryptoRoutingLogic, CryptoDataPassing {
     weak var viewController: CryptoViewController?
     var dataStore: CryptoDataStore?
     
     // MARK: Routing
     
-    func routeToCryptoDetail(segue: UIStoryboardSegue?)
-    {
+    func routeToCryptoDetail(segue: UIStoryboardSegue?) {
       if let segue = segue {
         let destinationVC = segue.destination as! CryptoDetailViewController
         var destinationDS = destinationVC.router!.dataStore!
@@ -46,15 +42,13 @@ class CryptoRouter: NSObject, CryptoRoutingLogic, CryptoDataPassing
     
     // MARK: Navigation
     
-    func navigateToCryptoDetail(source: CryptoViewController, destination: CryptoDetailViewController)
-    {
+    func navigateToCryptoDetail(source: CryptoViewController, destination: CryptoDetailViewController) {
       source.show(destination, sender: nil)
     }
     
     // MARK: Passing data
     
-    func passDataToCryptoDetail(source: CryptoDataStore, destination: inout CryptoDetailDataStore)
-    {
+    func passDataToCryptoDetail(source: CryptoDataStore, destination: inout CryptoDetailDataStore) {
         destination.crypto = source.crypto
     }
 }

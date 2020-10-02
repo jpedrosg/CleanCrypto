@@ -11,12 +11,10 @@ import UIKit
 extension String {
     
      static func formatValueForCurrencyCode(value: Double, myCode: String) -> String? {
-        
         let locales: NSArray = NSLocale.availableLocaleIdentifiers as NSArray
         for localeID in locales as! [NSString] {
             let locale = NSLocale(localeIdentifier: localeID as String)
             let code = locale.object(forKey: NSLocale.Key.currencyCode) as? String
-            
             
             if code == myCode {
                 

@@ -12,19 +12,16 @@
 
 import UIKit
 
-protocol CryptoPresentationLogic
-{
+protocol CryptoPresentationLogic {
     func presentFetchedCrypto(response: CryptoModels.FetchCrypto.Response)
 }
 
-class CryptoPresenter: CryptoPresentationLogic
-{
+class CryptoPresenter: CryptoPresentationLogic {
     weak var viewController: CryptoDisplayLogic?
     
     // MARK: Do something
     
-    func presentFetchedCrypto(response: CryptoModels.FetchCrypto.Response)
-    {
+    func presentFetchedCrypto(response: CryptoModels.FetchCrypto.Response) {
         var displayedCrypto: CryptoModels.FetchCrypto.ViewModel.DisplayedCrypto
         
         var formattedPrice = " Não Encontrado "
