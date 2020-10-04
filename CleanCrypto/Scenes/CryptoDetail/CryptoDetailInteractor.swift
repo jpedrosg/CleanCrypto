@@ -13,22 +13,22 @@
 import UIKit
 
 protocol CryptoDetailBusinessLogic {
-    func getCryptoData(request: CryptoDetail.CryptoData.Request)
+    func getCryptoData(request: CryptoDetailModels.SelectedCrypto.Request)
 }
 
 protocol CryptoDetailDataStore {
-    var crypto: Crypto! { get set }
+    var crypto: CryptoModels.FetchCrypto.Response! { get set }
 }
 
 class CryptoDetailInteractor: CryptoDetailBusinessLogic, CryptoDetailDataStore {
     var presenter: CryptoDetailPresentationLogic?
     var worker: CryptoDetailWorker?
-    var crypto: Crypto!
+    var crypto: CryptoModels.FetchCrypto.Response!
     
     // MARK: Get CryptoData
     
-    func getCryptoData(request: CryptoDetail.CryptoData.Request) {
-        let response = CryptoDetail.CryptoData.Response(crypto: self.crypto)
-        presenter?.presentCryptoData(response: response)
+    func getCryptoData(request: CryptoDetailModels.SelectedCrypto.Request) {
+        let response = self.crypto
+        presenter?.presentCryptoData(response: response!)
     }
 }

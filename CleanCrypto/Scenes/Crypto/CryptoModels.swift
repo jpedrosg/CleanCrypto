@@ -20,8 +20,15 @@ enum CryptoModels {
             var ticket: String
             var currency: String
         }
-        struct Response {
-            var crypto: Crypto
+        struct Response: Codable {
+            var time, assetIdBase, assetIdQuote: String?
+            var rate: Double?
+            enum CodingKeys: String, CodingKey {
+                case time
+                case assetIdBase
+                case assetIdQuote
+                case rate
+            }
         }
         struct ViewModel {
             struct DisplayedCrypto {

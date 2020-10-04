@@ -41,7 +41,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "715283162213143D004602FF"
+               BlueprintIdentifier = "3BA89BE5252A43B30004CB2B"
                BuildableName = "CleanCryptoTests.xctest"
                BlueprintName = "CleanCryptoTests"
                ReferencedContainer = "container:CleanCrypto.xcodeproj">
@@ -51,7 +51,7 @@
             skipped = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "715283212213143D004602FF"
+               BlueprintIdentifier = "3BA89BF3252A43C60004CB2B"
                BuildableName = "CleanCryptoUITests.xctest"
                BlueprintName = "CleanCryptoUITests"
                ReferencedContainer = "container:CleanCrypto.xcodeproj">

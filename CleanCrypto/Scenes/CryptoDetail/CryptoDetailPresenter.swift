@@ -13,7 +13,7 @@
 import UIKit
 
 protocol CryptoDetailPresentationLogic {
-  func presentCryptoData(response: CryptoDetail.CryptoData.Response)
+  func presentCryptoData(response: CryptoModels.FetchCrypto.Response)
 }
 
 class CryptoDetailPresenter: CryptoDetailPresentationLogic {
@@ -21,21 +21,21 @@ class CryptoDetailPresenter: CryptoDetailPresentationLogic {
   
   // MARK: Do something
   
-  func presentCryptoData(response: CryptoDetail.CryptoData.Response) {
-    var displayedCrypto: CryptoDetail.CryptoData.ViewModel.DisplayedCrypto
+  func presentCryptoData(response: CryptoModels.FetchCrypto.Response) {
+    var displayedCrypto: CryptoDetailModels.SelectedCrypto.ViewModel.DisplayedCrypto
     
     var formattedPrice = " Não Encontrado "
     
     // Using Extension
-    if let code = response.crypto.assetIDQuote, let value = response.crypto.rate {
+    if let code = response.assetIdQuote, let value = response.rate {
         formattedPrice = String.formatValueForCurrencyCode(value: value, myCode: code) ?? " Não Encontrado "
     }
     
     // Creating ViewModel
-    displayedCrypto = CryptoDetail.CryptoData.ViewModel.DisplayedCrypto(price: formattedPrice, ticket: response.crypto.assetIDBase ?? " ? ", variacao24H: "+ 2.73%", variacaoMes: "- 5.41%", variacaoAno: "+ 29.68%")
+    displayedCrypto = CryptoDetailModels.SelectedCrypto.ViewModel.DisplayedCrypto(price: formattedPrice, ticket: response.assetIdBase ?? " ? ", variacao24H: "+ 2.73%", variacaoMes: "- 5.41%", variacaoAno: "+ 29.68%")
     
     // Displaying
-    let viewModel = CryptoDetail.CryptoData.ViewModel(displayedCrypto: displayedCrypto)
+    let viewModel = CryptoDetailModels.SelectedCrypto.ViewModel(displayedCrypto: displayedCrypto)
     viewController?.displayCryptoData(viewModel: viewModel)
   }
 }

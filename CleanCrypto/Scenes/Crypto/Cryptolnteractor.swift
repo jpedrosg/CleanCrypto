@@ -17,11 +17,11 @@ protocol CryptoBusinessLogic {
 }
 
 protocol CryptoDataStore {
-    var crypto: Crypto! { get set }
+    var crypto: CryptoModels.FetchCrypto.Response! { get set }
 }
 
 class CryptoInteractor: CryptoBusinessLogic, CryptoDataStore {
-    var crypto: Crypto!
+    var crypto: CryptoModels.FetchCrypto.Response!
     var presenter: CryptoPresentationLogic?
     var cryptoWorker: CryptoWorkerDisplayLogic?
     
@@ -32,17 +32,28 @@ class CryptoInteractor: CryptoBusinessLogic, CryptoDataStore {
     // MARK: Fetch Crypto
     
     func fetchCrypto(request: CryptoModels.FetchCrypto.Request) {
-
-        cryptoWorker?.fetchCrypto(ticket: request.ticket, currency: request.currency) { (crypto, error) -> Void in
-            if let safeCrypto = crypto {
-                self.crypto = safeCrypto
-                let response = CryptoModels.FetchCrypto.Response(crypto: safeCrypto)
-                self.presenter?.presentFetchedCrypto(response: response)
+        displayLoading()
+        cryptoWorker?.fetchCrypto(ticket: request.ticket, currency: request.currency)
+            .done(handleFetchCryptoSuccess)
+            .catch(handleFetchCryptoError)
+            .finally {
+                self.removeLoading()
             }
-//            else if let safeError = error {
-//                // Errors here in future...
-//            }
-            
-        }
+    }
+    
+    private func handleFetchCryptoSuccess(response: CryptoModels.FetchCrypto.Response){
+        self.presenter?.presentFetchedCrypto(response: response)
+    }
+    
+    private func handleFetchCryptoError(error: Error) {
+        self.presenter?.presentCryptoError(error: error)
+    }
+    
+    private func displayLoading() {
+        presenter?.presentScreenLoading()
+    }
+    
+    private func removeLoading() {
+        presenter?.hideScreenLoading()
     }
 }

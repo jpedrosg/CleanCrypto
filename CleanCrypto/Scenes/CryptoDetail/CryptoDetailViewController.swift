@@ -13,7 +13,7 @@
 import UIKit
 
 protocol CryptoDetailDisplayLogic: class {
-    func displayCryptoData(viewModel: CryptoDetail.CryptoData.ViewModel)
+    func displayCryptoData(viewModel: CryptoDetailModels.SelectedCrypto.ViewModel)
 }
 
 class CryptoDetailViewController: UIViewController, CryptoDetailDisplayLogic {
@@ -80,11 +80,11 @@ class CryptoDetailViewController: UIViewController, CryptoDetailDisplayLogic {
     // MARK: Do something
     
     func getCryptoData() {
-        let request = CryptoDetail.CryptoData.Request()
+        let request = CryptoDetailModels.SelectedCrypto.Request()
         interactor?.getCryptoData(request: request)
     }
     
-    func displayCryptoData(viewModel: CryptoDetail.CryptoData.ViewModel) {
+    func displayCryptoData(viewModel: CryptoDetailModels.SelectedCrypto.ViewModel) {
         lblTicket.text = viewModel.displayedCrypto.ticket
         lblCotacao.text = viewModel.displayedCrypto.price
         lblVar24h.text = viewModel.displayedCrypto.variacao24H

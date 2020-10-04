@@ -14,9 +14,13 @@ import UIKit
 
 protocol CryptoPresentationLogic {
     func presentFetchedCrypto(response: CryptoModels.FetchCrypto.Response)
+    func presentCryptoError(error: Error)
+    func presentScreenLoading()
+    func hideScreenLoading()
 }
 
 class CryptoPresenter: CryptoPresentationLogic {
+    
     weak var viewController: CryptoDisplayLogic?
     
     // MARK: Do something
@@ -27,15 +31,27 @@ class CryptoPresenter: CryptoPresentationLogic {
         var formattedPrice = " Não Encontrado "
         
         // Using Extension
-        if let code = response.crypto.assetIDQuote, let value = response.crypto.rate {
+        if let code = response.assetIdQuote, let value = response.rate {
             formattedPrice = String.formatValueForCurrencyCode(value: value, myCode: code) ?? " Não Encontrado "
         }
         
         // Creating ViewModel
-        displayedCrypto = CryptoModels.FetchCrypto.ViewModel.DisplayedCrypto(price: formattedPrice, ticket: response.crypto.assetIDBase ?? " ? ")
+        displayedCrypto = CryptoModels.FetchCrypto.ViewModel.DisplayedCrypto(price: formattedPrice, ticket: response.assetIdBase ?? " ? ")
         
         // Displaying
         let viewModel = CryptoModels.FetchCrypto.ViewModel(displayedCrypto: displayedCrypto)
         viewController?.displayFetchedCrypto(viewModel: viewModel)
+    }
+    
+    func presentCryptoError(error: Error) {
+        viewController?.displayCryptoError(error.localizedDescription)
+    }
+    
+    func presentScreenLoading() {
+        viewController?.displayScreenLoading()
+    }
+    
+    func hideScreenLoading() {
+        viewController?.hideScreenLoading()
     }
 }

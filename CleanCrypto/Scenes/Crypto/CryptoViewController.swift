@@ -12,11 +12,18 @@
 
 import UIKit
 
+// MARK: - CryptoDisplayLogic
+
 protocol CryptoDisplayLogic: class {
     func displayFetchedCrypto(viewModel: CryptoModels.FetchCrypto.ViewModel)
+    func displayCryptoError(_ error: String)
+    func displayScreenLoading()
+    func hideScreenLoading()
 }
 
-class CryptoViewController: UIViewController, CryptoDisplayLogic {
+// MARK: - UIViewController
+
+class CryptoViewController: UIViewController {
     var interactor: CryptoBusinessLogic?
     var router: (NSObjectProtocol & CryptoRoutingLogic & CryptoDataPassing)?
     
@@ -88,37 +95,46 @@ class CryptoViewController: UIViewController, CryptoDisplayLogic {
     // MARK: Fetch Crypto
     
     func fetchCrypto() {
-
         var ticketText:String?
         if txtTicket.text != "" {
             ticketText = txtTicket.text
         }
-        
         var ticketPlaceholder:String?
         if txtTicket.placeholder != "" {
             ticketPlaceholder = txtTicket.placeholder
         }
-        
         var currencyText:String?
         if txtCurrency.text != "" {
             currencyText = txtCurrency.text
         }
-        
         var currencyPlaceholder:String?
         if txtCurrency.placeholder != "" {
             currencyPlaceholder = txtCurrency.placeholder
         }
-        
         let request = CryptoModels.FetchCrypto.Request(ticket: ticketText ?? ticketPlaceholder ?? "LTC", currency: currencyText ?? currencyPlaceholder ?? "BRL")
         interactor?.fetchCrypto(request: request)
+    }
+}
+
+// MARK: - CryptoDisplayLogic
+
+extension CryptoViewController: CryptoDisplayLogic {
+    
+    func displayScreenLoading() {
         indicator.startAnimating()
+    }
+    
+    func hideScreenLoading() {
+        indicator.stopAnimating()
     }
     
     func displayFetchedCrypto(viewModel: CryptoModels.FetchCrypto.ViewModel) {
         lblTicket.text = viewModel.displayedCrypto.ticket
         lblPrice.text = viewModel.displayedCrypto.price
-        indicator.stopAnimating()
         txtCurrency.text = ""
         txtTicket.text = ""
+    }
+    
+    func displayCryptoError(_ error: String) {
     }
 }

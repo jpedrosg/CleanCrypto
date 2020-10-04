@@ -12,14 +12,14 @@
 
 import UIKit
 
-enum CryptoDetail {
+enum CryptoDetailModels {
   // MARK: Use cases
   
-  enum CryptoData {
+  enum SelectedCrypto {
     struct Request { }
-    struct Response {
-        var crypto: Crypto
-    }
+    
+    struct Response { }
+    
     struct ViewModel {
         struct DisplayedCrypto {
             var price: String
