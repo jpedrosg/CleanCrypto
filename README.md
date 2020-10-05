@@ -2,11 +2,11 @@
 
 Desenvolvido por João Pedro S. Giarrante
 
-[![IDE](https://img.shields.io/badge/Xcode-10-blue.svg)](https://developer.apple.com/xcode/)
-[![Language](https://img.shields.io/badge/swift-4-orange.svg)](https://swift.org)
-[![Platform](https://img.shields.io/badge/iOS-12-green.svg)](https://developer.apple.com/ios/)
-[![Build Status](https://travis-ci.org/Clean-Swift/CleanStore.svg?branch=master)](https://travis-ci.org/Clean-Swift/CleanStore)
-[![License](https://img.shields.io/github/license/Clean-Swift/CleanStore.svg)](LICENSE)
+[![IDE](https://img.shields.io/badge/Xcode-12-blue.svg)](https://developer.apple.com/xcode/)
+[![Language](https://img.shields.io/badge/swift-5-orange.svg)](https://swift.org)
+[![Platform](https://img.shields.io/badge/iOS-14-green.svg)](https://developer.apple.com/ios/)
+[![Build Status](https://travis-ci.org/jpedrosg/jpsg.clean_crypto.svg?branch=master)](https://travis-ci.org/jpedrosg/jpsg.clean_crypto)
+[![License](https://img.shields.io/github/license/jpedrosg/jpsg.clean_crypto.svg)](LICENSE)
 
 # Introdução: 
 Aplicativo iOS que tem como objetivo acessar a [CoinApi](https://www.coinapi.io) , e visualizar cotação de Crypto Moedas.
