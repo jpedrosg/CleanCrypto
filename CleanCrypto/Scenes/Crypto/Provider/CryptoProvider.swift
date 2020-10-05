@@ -16,7 +16,7 @@ class CryptoProvider: RequestProviderProtocol {
         
         path = "/v1/exchangerate/\(ticket)/\(currency)"
         queryItems = [
-               URLQueryItem(name: "apikey", value: "5256247C-E5D3-4EAF-9678-8C01E87FB69C"),
+               URLQueryItem(name: "apikey", value: "CD098C13-4B4A-4B2A-A431-3767EC05DC72"),
            ]
     }
 
