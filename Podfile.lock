@@ -41,10 +41,10 @@ DEPENDENCIES:
   - iOSSnapshotTestCase
   - KIF
   - KIF/IdentifierTests
-  - Nimble
+  - Nimble (= 8.0.4)
   - OHHTTPStubs/Swift
   - PromiseKit
-  - Quick
+  - Quick (= 2.2.0)
   - SDWebImage
 
 SPEC REPOS:
@@ -66,6 +66,6 @@ SPEC CHECKSUMS:
   Quick: 7fb19e13be07b5dfb3b90d4f9824c855a11af40e
   SDWebImage: 0b42b8719ab0c5257177d5894306e8a336b21cbb
 
-PODFILE CHECKSUM: a620701f5827e3c16182b1de1c476abcb4e2acfd
+PODFILE CHECKSUM: 458f567af416e7d7538d18033b8ae1770ef756fa
 
 COCOAPODS: 1.9.3

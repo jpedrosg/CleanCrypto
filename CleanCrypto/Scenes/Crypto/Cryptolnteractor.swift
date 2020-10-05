@@ -17,15 +17,15 @@ protocol CryptoBusinessLogic {
 }
 
 protocol CryptoDataStore {
-    var crypto: CryptoModels.FetchCrypto.Response! { get set }
+    var crypto: CryptoModels.FetchCrypto.Response? { get set }
 }
 
 class CryptoInteractor: CryptoBusinessLogic, CryptoDataStore {
-    var crypto: CryptoModels.FetchCrypto.Response!
+    var crypto: CryptoModels.FetchCrypto.Response?
     var presenter: CryptoPresentationLogic?
-    var cryptoWorker: CryptoWorkerDisplayLogic?
+    var cryptoWorker: CryptoNetworkLogic?
     
-    init(cryptoWorker: CryptoWorkerDisplayLogic = CryptoWorker()) {
+    init(cryptoWorker: CryptoNetworkLogic = CryptoWorker()) {
         self.cryptoWorker = cryptoWorker
     }
     
@@ -33,6 +33,7 @@ class CryptoInteractor: CryptoBusinessLogic, CryptoDataStore {
     
     func fetchCrypto(request: CryptoModels.FetchCrypto.Request) {
         displayLoading()
+        disableDetailButton()
         cryptoWorker?.fetchCrypto(ticket: request.ticket, currency: request.currency)
             .done(handleFetchCryptoSuccess)
             .catch(handleFetchCryptoError)
@@ -42,11 +43,13 @@ class CryptoInteractor: CryptoBusinessLogic, CryptoDataStore {
     }
     
     private func handleFetchCryptoSuccess(response: CryptoModels.FetchCrypto.Response){
-        self.presenter?.presentFetchedCrypto(response: response)
+        crypto = response
+        presenter?.presentFetchedCrypto(response: crypto!)
+        enableDetailButton()
     }
     
     private func handleFetchCryptoError(error: Error) {
-        self.presenter?.presentCryptoError(error: error)
+        presenter?.presentCryptoError(error: error)
     }
     
     private func displayLoading() {
@@ -55,5 +58,13 @@ class CryptoInteractor: CryptoBusinessLogic, CryptoDataStore {
     
     private func removeLoading() {
         presenter?.hideScreenLoading()
+    }
+    
+    private func enableDetailButton() {
+        presenter?.enableDetailButton()
+    }
+    
+    private func disableDetailButton() {
+        presenter?.disableDetailButton()
     }
 }

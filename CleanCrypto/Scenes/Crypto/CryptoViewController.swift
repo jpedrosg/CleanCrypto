@@ -16,9 +16,12 @@ import UIKit
 
 protocol CryptoDisplayLogic: class {
     func displayFetchedCrypto(viewModel: CryptoModels.FetchCrypto.ViewModel)
-    func displayCryptoError(_ error: String)
+    func displayCryptoError(error: String, viewModel: CryptoModels.FetchCrypto.ViewModel)
+    func cleanTextFields()
     func displayScreenLoading()
     func hideScreenLoading()
+    func enableDetailButton()
+    func disableDetailButton()
 }
 
 // MARK: - UIViewController
@@ -87,6 +90,7 @@ class CryptoViewController: UIViewController {
     @IBOutlet weak var txtTicket: UITextField!
     @IBOutlet weak var txtCurrency: UITextField!
     @IBOutlet weak var btnReload: UIButton!
+    @IBOutlet weak var btnDetail: UIButton!
     
     @IBAction func clickCryptoImage(_ sender: UIButton) {
         fetchCrypto()
@@ -131,10 +135,28 @@ extension CryptoViewController: CryptoDisplayLogic {
     func displayFetchedCrypto(viewModel: CryptoModels.FetchCrypto.ViewModel) {
         lblTicket.text = viewModel.displayedCrypto.ticket
         lblPrice.text = viewModel.displayedCrypto.price
+    }
+    
+    func displayCryptoError(error: String, viewModel: CryptoModels.FetchCrypto.ViewModel) {
+        print(error)
+        lblTicket.text = viewModel.displayedCrypto.ticket
+        lblPrice.text = viewModel.displayedCrypto.price
+    }
+    
+    func cleanTextFields(){
         txtCurrency.text = ""
         txtTicket.text = ""
     }
     
-    func displayCryptoError(_ error: String) {
+    func disableDetailButton() {
+        btnDetail.isUserInteractionEnabled = false
+        btnDetail.isEnabled = false
+        btnDetail.alpha = 0.6
+    }
+    
+    func enableDetailButton() {
+        btnDetail.isUserInteractionEnabled = true
+        btnDetail.isEnabled = true
+        btnDetail.alpha = 1.0
     }
 }

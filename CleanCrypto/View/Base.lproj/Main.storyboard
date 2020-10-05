@@ -13,7 +13,7 @@
         <!--Crypto View Controller-->
         <scene sceneID="9ZO-Kp-9NA">
             <objects>
-                <viewController storyboardIdentifier="BitcoinViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rV3-WG-ZHq" customClass="CryptoViewController" customModule="CleanCrypto" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CryptoViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rV3-WG-ZHq" customClass="CryptoViewController" customModule="CleanCrypto" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uVf-MY-0kO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -160,6 +160,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="5SE-WX-nUY"/>
                     <connections>
+                        <outlet property="btnDetail" destination="kg4-6X-bJE" id="T2o-7Z-hdd"/>
                         <outlet property="btnReload" destination="mqN-WB-i6I" id="u2g-rz-3jf"/>
                         <outlet property="indicator" destination="Gdf-5j-r9g" id="LSp-rj-yr0"/>
                         <outlet property="lblPrice" destination="kNb-xL-XbD" id="aNn-n4-pRC"/>
@@ -175,7 +176,7 @@
         <!--Crypto Detail View Controller-->
         <scene sceneID="vT7-WJ-bsF">
             <objects>
-                <viewController id="tS7-2a-aCw" customClass="CryptoDetailViewController" customModule="CleanCrypto" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CryptoDetailViewController" id="tS7-2a-aCw" customClass="CryptoDetailViewController" customModule="CleanCrypto" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="i8j-IY-b57">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

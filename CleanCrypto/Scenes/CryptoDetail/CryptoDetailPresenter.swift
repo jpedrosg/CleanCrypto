@@ -13,29 +13,34 @@
 import UIKit
 
 protocol CryptoDetailPresentationLogic {
-  func presentCryptoData(response: CryptoModels.FetchCrypto.Response)
+    func presentCryptoData(response: CryptoModels.FetchCrypto.Response)
+    func presentError()
 }
 
 class CryptoDetailPresenter: CryptoDetailPresentationLogic {
-  weak var viewController: CryptoDetailDisplayLogic?
-  
-  // MARK: Do something
-  
-  func presentCryptoData(response: CryptoModels.FetchCrypto.Response) {
-    var displayedCrypto: CryptoDetailModels.SelectedCrypto.ViewModel.DisplayedCrypto
+    weak var viewController: CryptoDetailDisplayLogic?
     
-    var formattedPrice = " Não Encontrado "
+    // MARK: Do something
     
-    // Using Extension
-    if let code = response.assetIdQuote, let value = response.rate {
-        formattedPrice = String.formatValueForCurrencyCode(value: value, myCode: code) ?? " Não Encontrado "
+    func presentCryptoData(response: CryptoModels.FetchCrypto.Response) {
+        var displayedCrypto: CryptoDetailModels.SelectedCrypto.ViewModel.DisplayedCrypto
+        
+        var formattedPrice = DefaultModelValues.price.rawValue
+        
+        // Using Extension
+        if let code = response.assetIdQuote, let value = response.rate {
+            formattedPrice = String.formatValueForCurrencyCode(value: value, myCode: code) ?? DefaultModelValues.price.rawValue
+        }
+        
+        // Creating ViewModel
+        displayedCrypto = CryptoDetailModels.SelectedCrypto.ViewModel.DisplayedCrypto(price: formattedPrice, ticket: response.assetIdBase ?? DefaultModelValues.ticket.rawValue, variacao24H: "+ 2.73%", variacaoMes: "- 5.41%", variacaoAno: "+ 29.68%")
+        
+        // Displaying
+        let viewModel = CryptoDetailModels.SelectedCrypto.ViewModel(displayedCrypto: displayedCrypto)
+        viewController?.displayCryptoData(viewModel: viewModel)
     }
     
-    // Creating ViewModel
-    displayedCrypto = CryptoDetailModels.SelectedCrypto.ViewModel.DisplayedCrypto(price: formattedPrice, ticket: response.assetIdBase ?? " ? ", variacao24H: "+ 2.73%", variacaoMes: "- 5.41%", variacaoAno: "+ 29.68%")
-    
-    // Displaying
-    let viewModel = CryptoDetailModels.SelectedCrypto.ViewModel(displayedCrypto: displayedCrypto)
-    viewController?.displayCryptoData(viewModel: viewModel)
-  }
+    func presentError() {
+        viewController?.displayError()
+    }
 }

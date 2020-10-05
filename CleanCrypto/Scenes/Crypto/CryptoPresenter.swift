@@ -17,26 +17,34 @@ protocol CryptoPresentationLogic {
     func presentCryptoError(error: Error)
     func presentScreenLoading()
     func hideScreenLoading()
+    func enableDetailButton()
+    func disableDetailButton()
+}
+
+enum DefaultModelValues: String {
+    case price = " Não Encontrado "
+    case ticket = " ? "
 }
 
 class CryptoPresenter: CryptoPresentationLogic {
     
     weak var viewController: CryptoDisplayLogic?
     
+    
     // MARK: Present FetchCrypto
     
     func presentFetchedCrypto(response: CryptoModels.FetchCrypto.Response) {
         var displayedCrypto: CryptoModels.FetchCrypto.ViewModel.DisplayedCrypto
         
-        var formattedPrice = " Não Encontrado "
+        var formattedPrice = DefaultModelValues.price.rawValue
         
         // Using Extension
         if let code = response.assetIdQuote, let value = response.rate {
-            formattedPrice = String.formatValueForCurrencyCode(value: value, myCode: code) ?? " Não Encontrado "
+            formattedPrice = String.formatValueForCurrencyCode(value: value, myCode: code) ?? DefaultModelValues.price.rawValue
         }
         
         // Creating ViewModel
-        displayedCrypto = CryptoModels.FetchCrypto.ViewModel.DisplayedCrypto(price: formattedPrice, ticket: response.assetIdBase ?? " ? ")
+        displayedCrypto = CryptoModels.FetchCrypto.ViewModel.DisplayedCrypto(price: formattedPrice, ticket: response.assetIdBase ?? DefaultModelValues.ticket.rawValue)
         
         // Displaying
         let viewModel = CryptoModels.FetchCrypto.ViewModel(displayedCrypto: displayedCrypto)
@@ -44,7 +52,8 @@ class CryptoPresenter: CryptoPresentationLogic {
     }
     
     func presentCryptoError(error: Error) {
-        viewController?.displayCryptoError(error.localizedDescription)
+        let displayedCrypto = CryptoModels.FetchCrypto.ViewModel.DisplayedCrypto(price: DefaultModelValues.price.rawValue, ticket: DefaultModelValues.ticket.rawValue)
+        viewController?.displayCryptoError(error: error.localizedDescription, viewModel: CryptoModels.FetchCrypto.ViewModel(displayedCrypto: displayedCrypto))
     }
     
     func presentScreenLoading() {
@@ -53,5 +62,13 @@ class CryptoPresenter: CryptoPresentationLogic {
     
     func hideScreenLoading() {
         viewController?.hideScreenLoading()
+    }
+    
+    func enableDetailButton() {
+        viewController?.enableDetailButton()
+    }
+    
+    func disableDetailButton() {
+        viewController?.disableDetailButton()
     }
 }

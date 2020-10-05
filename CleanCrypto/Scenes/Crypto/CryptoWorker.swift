@@ -9,11 +9,11 @@
 import Foundation
 import PromiseKit
 
-protocol CryptoWorkerDisplayLogic {
+protocol CryptoNetworkLogic {
     func fetchCrypto(ticket: String, currency: String) -> Promise<CryptoModels.FetchCrypto.Response>
 }
 
-class CryptoWorker: CryptoWorkerDisplayLogic {
+class CryptoWorker: CryptoNetworkLogic {
     
     let networkProvider = NetworkProvider.shared
     

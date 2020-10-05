@@ -20,6 +20,20 @@
                ReferencedContainer = "container:CleanCrypto.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "3BA89BE5252A43B30004CB2B"
+               BuildableName = "CleanCryptoTests.xctest"
+               BlueprintName = "CleanCryptoTests"
+               ReferencedContainer = "container:CleanCrypto.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -32,19 +46,20 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3B01955D252AA2BF00E1A295"
-               BuildableName = "CleanCryptoSnapshotTests.xctest"
-               BlueprintName = "CleanCryptoSnapshotTests"
+               BlueprintIdentifier = "3B019570252AA2E500E1A295"
+               BuildableName = "CleanCryptoSnapshotsTests.xctest"
+               BlueprintName = "CleanCryptoSnapshotsTests"
                ReferencedContainer = "container:CleanCrypto.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
-            skipped = "NO">
+            skipped = "NO"
+            parallelizable = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3B019570252AA2E500E1A295"
-               BuildableName = "CleanCryptoSnapshotsTests.xctest"
-               BlueprintName = "CleanCryptoSnapshotsTests"
+               BlueprintIdentifier = "3BA89BE5252A43B30004CB2B"
+               BuildableName = "CleanCryptoTests.xctest"
+               BlueprintName = "CleanCryptoTests"
                ReferencedContainer = "container:CleanCrypto.xcodeproj">
             </BuildableReference>
          </TestableReference>

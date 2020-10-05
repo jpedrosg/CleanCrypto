@@ -13,8 +13,8 @@ target 'CleanCrypto' do
   target 'CleanCryptoTests' do
     inherit! :search_paths
     # Pods Unit Tests:
-    pod 'Quick'
-    pod 'Nimble'
+    pod 'Nimble', '8.0.4'
+    pod 'Quick', '2.2.0'
   end
 
   target 'CleanCryptoSnapshotsTests' do

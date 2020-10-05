@@ -14,6 +14,7 @@ import UIKit
 
 protocol CryptoDetailDisplayLogic: class {
     func displayCryptoData(viewModel: CryptoDetailModels.SelectedCrypto.ViewModel)
+    func displayError()
 }
 
 class CryptoDetailViewController: UIViewController, CryptoDetailDisplayLogic {
@@ -46,18 +47,7 @@ class CryptoDetailViewController: UIViewController, CryptoDetailDisplayLogic {
         router.viewController = viewController
         router.dataStore = interactor
     }
-    
-    // MARK: Routing
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let scene = segue.identifier {
-            let selector = NSSelectorFromString("routeTo\(scene)WithSegue:")
-            if let router = router, router.responds(to: selector) {
-                router.perform(selector, with: segue)
-            }
-        }
-    }
-    
+
     // MARK: View lifecycle
     
     override func viewDidLoad() {
@@ -80,8 +70,7 @@ class CryptoDetailViewController: UIViewController, CryptoDetailDisplayLogic {
     // MARK: Do something
     
     func getCryptoData() {
-        let request = CryptoDetailModels.SelectedCrypto.Request()
-        interactor?.getCryptoData(request: request)
+        interactor?.getCryptoData()
     }
     
     func displayCryptoData(viewModel: CryptoDetailModels.SelectedCrypto.ViewModel) {
@@ -90,5 +79,9 @@ class CryptoDetailViewController: UIViewController, CryptoDetailDisplayLogic {
         lblVar24h.text = viewModel.displayedCrypto.variacao24H
         lblVarMes.text = viewModel.displayedCrypto.variacaoMes
         lblVarAno.text = viewModel.displayedCrypto.variacaoAno
+    }
+    
+    func displayError() {
+        self.dismiss(animated: true, completion: nil)
     }
 }

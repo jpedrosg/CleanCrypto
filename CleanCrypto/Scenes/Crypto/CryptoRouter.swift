@@ -29,13 +29,13 @@ class CryptoRouter: NSObject, CryptoRoutingLogic, CryptoDataPassing {
     func routeToCryptoDetail(segue: UIStoryboardSegue?) {
       if let segue = segue {
         let destinationVC = segue.destination as! CryptoDetailViewController
-        var destinationDS = destinationVC.router!.dataStore!
-        passDataToCryptoDetail(source: dataStore!, destination: &destinationDS)
+        var destinationDS = destinationVC.router!.dataStore
+        passDataToCryptoDetail(source: dataStore, destination: &destinationDS)
       } else {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let destinationVC = storyboard.instantiateViewController(withIdentifier: "CryptoDetailViewController") as! CryptoDetailViewController
-        var destinationDS = destinationVC.router!.dataStore!
-        passDataToCryptoDetail(source: dataStore!, destination: &destinationDS)
+        var destinationDS = destinationVC.router!.dataStore
+        passDataToCryptoDetail(source: dataStore, destination: &destinationDS)
         navigateToCryptoDetail(source: viewController!, destination: destinationVC)
       }
     }
@@ -48,7 +48,9 @@ class CryptoRouter: NSObject, CryptoRoutingLogic, CryptoDataPassing {
     
     // MARK: Passing data
     
-    func passDataToCryptoDetail(source: CryptoDataStore, destination: inout CryptoDetailDataStore) {
-        destination.crypto = source.crypto
+    func passDataToCryptoDetail(source: CryptoDataStore?, destination: inout CryptoDetailDataStore?) {
+        if var safeDestination = destination, let safeSource = source {
+            safeDestination.crypto = safeSource.crypto
+        }
     }
 }
