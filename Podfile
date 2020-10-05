@@ -6,7 +6,6 @@ target 'CleanCrypto' do
   use_frameworks!
   
   # Pods Project:
-  pod 'SDWebImage'
   pod 'PromiseKit'
   pod 'OHHTTPStubs/Swift'
   

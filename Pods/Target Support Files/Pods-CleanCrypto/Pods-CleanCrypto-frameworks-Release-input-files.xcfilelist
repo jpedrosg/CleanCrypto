@@ -1,4 +1,3 @@
 ${PODS_ROOT}/Target Support Files/Pods-CleanCrypto/Pods-CleanCrypto-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/OHHTTPStubs/OHHTTPStubs.framework
 ${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework
-${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework
