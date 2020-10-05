@@ -17,8 +17,12 @@ target 'CleanCrypto' do
     pod 'Nimble'
   end
 
-  target 'CleanCryptoUITests' do
-    # Pods for UI Tests:
+  target 'CleanCryptoSnapshotsTests' do
+    # Pods for Snapshots Tests:
+    inherit! :search_paths
+    pod 'iOSSnapshotTestCase'
+    pod 'KIF', :configurations => ['Debug']
+    pod 'KIF/IdentifierTests', :configurations => ['Debug']
   end
 
 end

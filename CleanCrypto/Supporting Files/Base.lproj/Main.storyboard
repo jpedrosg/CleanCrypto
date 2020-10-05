@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MQV-Dz-DUc">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -86,6 +87,7 @@
                                                                 <subviews>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kg4-6X-bJE">
                                                                         <rect key="frame" x="0.0" y="1.6666666666666643" width="45" height="42"/>
+                                                                        <accessibility key="accessibilityConfiguration" identifier="CryptoButton"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="45" id="Xwx-2J-Ivj"/>
                                                                             <constraint firstAttribute="height" constant="45" id="lhV-EG-R2M"/>
@@ -333,7 +335,7 @@
                         <textAttributes key="largeTitleTextAttributes">
                             <color key="textColor" name="4 - Dark Slate Gray"/>
                         </textAttributes>
-                        <imageReference key="backIndicatorImage" image="arrowshape.turn.up.backward.circle.fill" catalog="system" symbolScale="default"/>
+                        <imageReference key="backIndicatorImage" image="arrowshape.turn.up.left.circle" catalog="system" symbolScale="default"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -347,7 +349,6 @@
     </scenes>
     <color key="tintColor" name="1 - Ash Gray"/>
     <resources>
-        <image name="arrowshape.turn.up.backward.circle.fill" catalog="system" width="128" height="121"/>
         <image name="arrowshape.turn.up.left.circle" catalog="system" width="128" height="121"/>
         <image name="bitcoinsign.square.fill" catalog="system" width="128" height="114"/>
         <namedColor name="1 - Ash Gray">

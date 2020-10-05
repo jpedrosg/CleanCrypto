@@ -28,7 +28,10 @@ class CryptoDetailInteractor: CryptoDetailBusinessLogic, CryptoDetailDataStore {
     // MARK: Get CryptoData
     
     func getCryptoData(request: CryptoDetailModels.SelectedCrypto.Request) {
-        let response = self.crypto
-        presenter?.presentCryptoData(response: response!)
+        if let response = self.crypto {
+            presenter?.presentCryptoData(response: response)
+        }
+        
+        
     }
 }

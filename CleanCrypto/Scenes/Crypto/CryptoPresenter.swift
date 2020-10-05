@@ -23,7 +23,7 @@ class CryptoPresenter: CryptoPresentationLogic {
     
     weak var viewController: CryptoDisplayLogic?
     
-    // MARK: Do something
+    // MARK: Present FetchCrypto
     
     func presentFetchedCrypto(response: CryptoModels.FetchCrypto.Response) {
         var displayedCrypto: CryptoModels.FetchCrypto.ViewModel.DisplayedCrypto
