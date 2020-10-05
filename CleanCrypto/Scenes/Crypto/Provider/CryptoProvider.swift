@@ -8,6 +8,11 @@
 
 import Foundation
 
+enum CoinApi: String {
+    case apiKey = "CD098C13-4B4A-4B2A-A431-3767EC05DC72"
+    
+}
+
 class CryptoProvider: RequestProviderProtocol {
     var path: String
     var queryItems: [URLQueryItem]
@@ -16,7 +21,7 @@ class CryptoProvider: RequestProviderProtocol {
         
         path = "/v1/exchangerate/\(ticket)/\(currency)"
         queryItems = [
-               URLQueryItem(name: "apikey", value: "CD098C13-4B4A-4B2A-A431-3767EC05DC72"),
+            URLQueryItem(name: "apikey", value: CoinApi.apiKey.rawValue),
            ]
     }
 

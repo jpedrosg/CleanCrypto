@@ -44,6 +44,8 @@ class CryptoInteractorTest: QuickSpec {
                         sut.fetchCrypto(request: mockRequest)
                         
                         expect(sut.crypto).toNot(beNil())
+                        expect(sut.crypto?.assetIdBase).to(contain(mockRequest.ticket))
+                        expect(sut.crypto?.assetIdQuote).to(contain(mockRequest.currency))
                         expect(mockPresenter.presentScreenLoadingCount).to(equal(1))
                         expect(mockPresenter.presentFetchedCryptoCount).to(equal(1))
                         expect(mockPresenter.hideScreenLoadingCount).to(equal(1))
@@ -56,6 +58,8 @@ class CryptoInteractorTest: QuickSpec {
                         sut.fetchCrypto(request: mockRequest)
                         
                         expect(sut.crypto).toNot(beNil())
+                        expect(sut.crypto?.assetIdBase).to(contain(mockRequest.ticket))
+                        expect(sut.crypto?.assetIdQuote).to(contain(mockRequest.currency))
                         expect(mockPresenter.presentScreenLoadingCount).to(equal(1))
                         expect(mockPresenter.hideScreenLoadingCount).to(equal(1))
                         expect(mockPresenter.presentFetchedCryptoCount).to(equal(1))
@@ -66,6 +70,8 @@ class CryptoInteractorTest: QuickSpec {
                         sut.fetchCrypto(request: mockRequest)
                         
                         expect(sut.crypto).toNot(beNil())
+                        expect(sut.crypto?.assetIdBase).to(contain(mockRequest.ticket))
+                        expect(sut.crypto?.assetIdQuote).to(contain(mockRequest.currency))
                         expect(mockPresenter.presentScreenLoadingCount).to(equal(2))
                         expect(mockPresenter.hideScreenLoadingCount).to(equal(2))
                         expect(mockPresenter.presentFetchedCryptoCount).to(equal(2))

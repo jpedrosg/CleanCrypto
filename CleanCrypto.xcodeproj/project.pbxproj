@@ -22,6 +22,8 @@
 		3B01964D252AD33300E1A295 /* CryptoDetailPresenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B01964C252AD33300E1A295 /* CryptoDetailPresenterMock.swift */; };
 		3B019652252AD62500E1A295 /* CryptoDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B019651252AD62500E1A295 /* CryptoDetailRouter.swift */; };
 		3B019657252AE54B00E1A295 /* crypto-response-btc-usd.json in Resources */ = {isa = PBXBuildFile; fileRef = 3B019656252AE54B00E1A295 /* crypto-response-btc-usd.json */; };
+		3B808495252B719C00AFCD41 /* StubsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B808494252B719C00AFCD41 /* StubsManager.swift */; };
+		3B80849A252B7AC900AFCD41 /* Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B808499252B7AC900AFCD41 /* Encodable.swift */; };
 		3BF6490D252A5C7B0020E59A /* CryptoProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF6490C252A5C7B0020E59A /* CryptoProvider.swift */; };
 		3BF64913252A5CDA0020E59A /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF64912252A5CDA0020E59A /* NetworkError.swift */; };
 		3BF64918252A5D130020E59A /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF64917252A5D130020E59A /* NetworkProvider.swift */; };
@@ -83,6 +85,8 @@
 		3B01964C252AD33300E1A295 /* CryptoDetailPresenterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoDetailPresenterMock.swift; sourceTree = "<group>"; };
 		3B019651252AD62500E1A295 /* CryptoDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoDetailRouter.swift; sourceTree = "<group>"; };
 		3B019656252AE54B00E1A295 /* crypto-response-btc-usd.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "crypto-response-btc-usd.json"; sourceTree = "<group>"; };
+		3B808494252B719C00AFCD41 /* StubsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubsManager.swift; sourceTree = "<group>"; };
+		3B808499252B7AC900AFCD41 /* Encodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encodable.swift; sourceTree = "<group>"; };
 		3BA89BE6252A43B30004CB2B /* CleanCryptoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CleanCryptoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BA89BEA252A43B30004CB2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3BF6490C252A5C7B0020E59A /* CryptoProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoProvider.swift; sourceTree = "<group>"; };
@@ -338,6 +342,8 @@
 				598273012522C74A00BA0D06 /* String.swift */,
 				3BF64921252A6F700020E59A /* Data.swift */,
 				3B0195F1252ABFD500E1A295 /* JSONReaderHelper.swift */,
+				3B808494252B719C00AFCD41 /* StubsManager.swift */,
+				3B808499252B7AC900AFCD41 /* Encodable.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -699,10 +705,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BF64913252A5CDA0020E59A /* NetworkError.swift in Sources */,
+				3B80849A252B7AC900AFCD41 /* Encodable.swift in Sources */,
 				59D5ED8B252181B900DB8AB5 /* CryptoModels.swift in Sources */,
 				598272F92522B43100BA0D06 /* CryptoDetailPresenter.swift in Sources */,
 				59D5ED8D252181B900DB8AB5 /* Cryptolnteractor.swift in Sources */,
 				598272FD2522B43100BA0D06 /* CryptoDetailViewController.swift in Sources */,
+				3B808495252B719C00AFCD41 /* StubsManager.swift in Sources */,
 				59D5ED972521966600DB8AB5 /* CryptoWorker.swift in Sources */,
 				3B019652252AD62500E1A295 /* CryptoDetailRouter.swift in Sources */,
 				59D5ED8A252181B900DB8AB5 /* CryptoRouter.swift in Sources */,
