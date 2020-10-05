@@ -17,11 +17,11 @@
 		3B0195E1252ABD9700E1A295 /* CryptoWorkerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0195E0252ABD9700E1A295 /* CryptoWorkerMock.swift */; };
 		3B0195ED252ABE9700E1A295 /* CryptoPresenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0195EC252ABE9700E1A295 /* CryptoPresenterMock.swift */; };
 		3B0195F2252ABFD500E1A295 /* JSONReaderHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0195F1252ABFD500E1A295 /* JSONReaderHelper.swift */; };
-		3B0195FE252AC1C400E1A295 /* crypto-response-btc-usd.json in Resources */ = {isa = PBXBuildFile; fileRef = 3B0195FD252AC1C400E1A295 /* crypto-response-btc-usd.json */; };
 		3B01961C252AC2EB00E1A295 /* CryptoInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B01961B252AC2EB00E1A295 /* CryptoInteractorTest.swift */; };
 		3B01963F252AD19400E1A295 /* CryptoDetailInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B01963E252AD19400E1A295 /* CryptoDetailInteractorTest.swift */; };
 		3B01964D252AD33300E1A295 /* CryptoDetailPresenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B01964C252AD33300E1A295 /* CryptoDetailPresenterMock.swift */; };
 		3B019652252AD62500E1A295 /* CryptoDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B019651252AD62500E1A295 /* CryptoDetailRouter.swift */; };
+		3B019657252AE54B00E1A295 /* crypto-response-btc-usd.json in Resources */ = {isa = PBXBuildFile; fileRef = 3B019656252AE54B00E1A295 /* crypto-response-btc-usd.json */; };
 		3BF6490D252A5C7B0020E59A /* CryptoProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF6490C252A5C7B0020E59A /* CryptoProvider.swift */; };
 		3BF64913252A5CDA0020E59A /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF64912252A5CDA0020E59A /* NetworkError.swift */; };
 		3BF64918252A5D130020E59A /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF64917252A5D130020E59A /* NetworkProvider.swift */; };
@@ -78,11 +78,11 @@
 		3B0195E0252ABD9700E1A295 /* CryptoWorkerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoWorkerMock.swift; sourceTree = "<group>"; };
 		3B0195EC252ABE9700E1A295 /* CryptoPresenterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoPresenterMock.swift; sourceTree = "<group>"; };
 		3B0195F1252ABFD500E1A295 /* JSONReaderHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONReaderHelper.swift; sourceTree = "<group>"; };
-		3B0195FD252AC1C400E1A295 /* crypto-response-btc-usd.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "crypto-response-btc-usd.json"; path = "../../../TopSwiftRepositories/TopSwiftRepositories/Resources/crypto-response-btc-usd.json"; sourceTree = "<group>"; };
 		3B01961B252AC2EB00E1A295 /* CryptoInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoInteractorTest.swift; sourceTree = "<group>"; };
 		3B01963E252AD19400E1A295 /* CryptoDetailInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoDetailInteractorTest.swift; sourceTree = "<group>"; };
 		3B01964C252AD33300E1A295 /* CryptoDetailPresenterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoDetailPresenterMock.swift; sourceTree = "<group>"; };
 		3B019651252AD62500E1A295 /* CryptoDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoDetailRouter.swift; sourceTree = "<group>"; };
+		3B019656252AE54B00E1A295 /* crypto-response-btc-usd.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "crypto-response-btc-usd.json"; sourceTree = "<group>"; };
 		3BA89BE6252A43B30004CB2B /* CleanCryptoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CleanCryptoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BA89BEA252A43B30004CB2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3BF6490C252A5C7B0020E59A /* CryptoProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoProvider.swift; sourceTree = "<group>"; };
@@ -217,7 +217,7 @@
 		3B0195F7252AC0E900E1A295 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				3B0195FD252AC1C400E1A295 /* crypto-response-btc-usd.json */,
+				3B019656252AE54B00E1A295 /* crypto-response-btc-usd.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -539,7 +539,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B0195FE252AC1C400E1A295 /* crypto-response-btc-usd.json in Resources */,
+				3B019657252AE54B00E1A295 /* crypto-response-btc-usd.json in Resources */,
 				715283112213143D004602FF /* LaunchScreen.storyboard in Resources */,
 				7152830E2213143D004602FF /* Assets.xcassets in Resources */,
 				7152830C2213143A004602FF /* Main.storyboard in Resources */,
