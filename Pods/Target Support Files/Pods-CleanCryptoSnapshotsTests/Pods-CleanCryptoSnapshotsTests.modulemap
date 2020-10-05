@@ -1,0 +1,6 @@
+framework module Pods_CleanCryptoSnapshotsTests {
+  umbrella header "Pods-CleanCryptoSnapshotsTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

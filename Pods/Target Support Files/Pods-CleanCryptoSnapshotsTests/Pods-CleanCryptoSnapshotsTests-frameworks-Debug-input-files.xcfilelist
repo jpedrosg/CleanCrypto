@@ -1,0 +1,3 @@
+${PODS_ROOT}/Target Support Files/Pods-CleanCryptoSnapshotsTests/Pods-CleanCryptoSnapshotsTests-frameworks.sh
+${BUILT_PRODUCTS_DIR}/KIF/KIF.framework
+${BUILT_PRODUCTS_DIR}/iOSSnapshotTestCase/FBSnapshotTestCase.framework

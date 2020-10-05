@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>CleanCrypto.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>isShown</key>
+			<true/>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>3B019570252AA2E500E1A295</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3BA89BE5252A43B30004CB2B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3BA89BF3252A43C60004CB2B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>715283022213143A004602FF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
