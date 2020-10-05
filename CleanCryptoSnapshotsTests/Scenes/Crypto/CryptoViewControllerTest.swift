@@ -18,9 +18,15 @@ class CryptoViewControllerTest: FBSnapshotTestCase {
     }
     
     func testViewController(){
-        // Validate first screen
+        
+        // launchscreen
         tester().waitForAnimationsToFinish()
+        // loadingscreen
+        tester().waitForAnimationsToFinish()
+        
+        
+        // Validate first screen
         let imageViewFirstScreen = SnapshotsTestsHelper.getCurrentImageScreen()
-        FBSnapshotVerifyView(imageViewFirstScreen, identifier: "first_screen_loading", overallTolerance: 0.1)
+        FBSnapshotVerifyView(imageViewFirstScreen, identifier: "first_screen", overallTolerance: 0.1)
     }
 }

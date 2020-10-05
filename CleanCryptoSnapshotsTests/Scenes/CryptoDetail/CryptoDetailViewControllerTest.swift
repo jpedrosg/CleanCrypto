@@ -18,11 +18,15 @@ class CryptoDetailViewControllerTest: FBSnapshotTestCase {
     }
     
     func testViewController(){
-        
+
+        // launchscreen
         tester().waitForAnimationsToFinish()
         
         // Search for CryptoButton
         if let cryptoButton = tester().waitForView(withAccessibilityIdentifier: "CryptoButton") as? UIButton {
+            
+            // loadingscreen
+            tester().waitForAnimationsToFinish()
             
             // Open CryptoDetailViewController
             tester().tapView(withAccessibilityIdentifier: cryptoButton.accessibilityIdentifier)
