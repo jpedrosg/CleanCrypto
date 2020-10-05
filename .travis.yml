@@ -5,5 +5,5 @@ cache:
   directories:
   - .autoconf
   - $HOME/.m2
- script: --timeout 20m script: xcodebuild clean build test -workspace CleanCrypto.xcworkspace -scheme "CleanCrypto" -sdk iphonesimulator -destination "platform=iOS Simulator,OS=14.0,name=iPhone 11" PLATFORM_NAME=iphonesimulator ONLY_ACTIVE_ARCH=NO CODE_SIGNING_REQUIRED=NO --quiet
+script: --timeout 20m script: xcodebuild clean build test -workspace CleanCrypto.xcworkspace -scheme "CleanCrypto" -sdk iphonesimulator -destination "platform=iOS Simulator,OS=14.0,name=iPhone 11" PLATFORM_NAME=iphonesimulator ONLY_ACTIVE_ARCH=NO CODE_SIGNING_REQUIRED=NO
 
