@@ -1,12 +1,9 @@
 os: osx
 osx_image: xcode12
 language: swift
-before_deploy:
-  - imagine code here
-  - pip install awscli
-  - pip install travis-wait-improved
-  - imagine more code
-deploy:
- provider: script
- script: travis-wait-improved --timeout 20m script: xcodebuild clean build test -workspace CleanCrypto.xcworkspace -scheme "CleanCrypto" -sdk iphonesimulator -destination "platform=iOS Simulator,OS=14.0,name=iPhone 11" PLATFORM_NAME=iphonesimulator ONLY_ACTIVE_ARCH=NO CODE_SIGNING_REQUIRED=NO --quiet
+cache:
+  directories:
+  - .autoconf
+  - $HOME/.m2
+ script: --timeout 20m script: xcodebuild clean build test -workspace CleanCrypto.xcworkspace -scheme "CleanCrypto" -sdk iphonesimulator -destination "platform=iOS Simulator,OS=14.0,name=iPhone 11" PLATFORM_NAME=iphonesimulator ONLY_ACTIVE_ARCH=NO CODE_SIGNING_REQUIRED=NO --quiet
 
