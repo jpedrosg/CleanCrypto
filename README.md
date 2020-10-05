@@ -14,7 +14,7 @@ Aplicativo iOS que tem como objetivo acessar a [CoinApi](https://www.coinapi.io)
 
 ## Screenshots
 
-<img src="https://i.ibb.co/c3dVTQH/test-View-Controller-Flow-first-screen-3x.png" height="400" width="200">             <img src="https://i.ibb.co/ZKczJdF/test-View-Controller-Flow-pull-requests-screen-3x.png" height="400" width="200">        
+<img src="https://github.com/jpedrosg/jpsg.clean_crypto/blob/master/firstScreenshot.png?raw=true" height="400" width="200">             <img src="https://github.com/jpedrosg/jpsg.clean_crypto/blob/master/secondScreenshot.png?raw=true" height="400" width="200">        
 
 Print 1 - Consulta de Crypto Moedas. 
 
@@ -45,6 +45,7 @@ Mais informações: https://clean-swift.com/clean-swift-ios-architecture/
 
 ## Features e diferenciais
 - Testes de caixa preta utlizando iOSSnapshotTestCase e o KIF
+- Dark Mode
 
 ## Próximas adições
 - Internacionalização
