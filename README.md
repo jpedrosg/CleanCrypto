@@ -2,10 +2,11 @@
 
 Desenvolvido por João Pedro S. Giarrante
 
-[![IDE](https://img.shields.io/badge/Xcode-12-blue.svg)](https://developer.apple.com/xcode/)
+[![IDE](https://img.shields.io/badge/Xcode-11.3-blue.svg)](https://developer.apple.com/xcode/)
 [![Language](https://img.shields.io/badge/swift-5-orange.svg)](https://swift.org)
 [![Platform](https://img.shields.io/badge/iOS-13.3-green.svg)](https://developer.apple.com/ios/)
-[![Build Status](https://travis-ci.org/ThiagoCO/TopSwiftRepositories.svg?branch=master)](https://travis-ci.org/ThiagoCO/TopSwiftRepositories)
+[![Build Status](https://travis-ci.com/github/jpedrosg/TopSwiftRepositories.svg?branch=master)](https://travis-ci.org/jpedrosg/jpsg.clean_crypto)
+[![License](https://img.shields.io/github/license/tiagoco/TopSwiftRepositories.svg)](LICENSE)
 
 # Introdução: 
 Aplicativo iOS que tem como objetivo acessar a [CoinApi](https://www.coinapi.io) , e visualizar cotação de Crypto Moedas.
