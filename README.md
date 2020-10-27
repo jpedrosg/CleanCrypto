@@ -5,7 +5,7 @@ Desenvolvido por João Pedro S. Giarrante
 [![IDE](https://img.shields.io/badge/Xcode-12-blue.svg)](https://developer.apple.com/xcode/)
 [![Language](https://img.shields.io/badge/swift-5-orange.svg)](https://swift.org)
 [![Platform](https://img.shields.io/badge/iOS-14-green.svg)](https://developer.apple.com/ios/)
-[![Build Status](https://travis-ci.com/jpedrosg/jpsg.clean_crypto.svg?branch=master)](https://travis-ci.com/jpedrosg/jpsg.clean_crypto.svg?branch=master)
+[![Build Status](https://travis-ci.com/jpedrosg/CleanCrypto.svg?branch=master)](https://travis-ci.com/jpedrosg/CleanCrypto.svg?branch=master)
 [![License](https://img.shields.io/github/license/jpedrosg/jpsg.clean_crypto.svg)](LICENSE)
 
 # Introdução: 
