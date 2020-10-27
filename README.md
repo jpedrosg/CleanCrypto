@@ -1,4 +1,4 @@
-# CleanStore
+# CleanCrypto
 
 Desenvolvido por João Pedro S. Giarrante
 
